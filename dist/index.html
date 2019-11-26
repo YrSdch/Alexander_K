@@ -17,48 +17,57 @@
 		<div class="site-header text-white">
 			<div class="flex-container min-h100vh">
 				<div class="row min-h100vh">
-					<div class="col-lg-6">
+					<div class="col-lg-6 ">
 						<div class="header__content min-h100vh">
 							<div class="header__top">
-								<img src="../img/site_logo.png" alt="Alexander Konning">
-								<div class="white-line"></div>
-								<div class="colection-version">
-									<span class="colection-counter">1.0</span>
-									<span class="colection-separotor">/</span>
-									<span class="colection-counter">6</span>
-								</div>
-								<div class="arrow-left">
-									<svg class="icon">
-									  <use xlink:href="#arrow"></use>
-									</svg>
-								</div>
-								<div class="arrow-right">
-									<svg class="icon">
-									  <use xlink:href="#arrow"></use>
-									</svg>
+								<img src="img/site_logo.png" alt="Alexander Konning">
+								<div class="version-wrapp">
+									<div class="white-line"></div>
+									<div class="colection-version">
+										<span class="colection-counter">1.0</span>
+										<span class="colection-separotor">/</span>
+										<span class="colection-counter">6</span>
+									</div>
+									<div class="arrow-left">
+										<svg class="icon">
+										  <use xlink:href="#arrow"></use>
+										</svg>
+									</div>
+									<div class="arrow-right">
+										<svg class="icon">
+										  <use xlink:href="#arrow"></use>
+										</svg>
+									</div>
 								</div>
 							</div>
-							<div class="header__bottom">
+							<div class="header__bottom pos-relative w100">
 								<div class="colection-version">
 									<span class="colection-counter">1</span>
 									<div class="white-line ml20"></div>
 								</div>
-								<h1 class="h1-title">RECONSTRUCTIONS OF A PAST STILL TO COME</h1>
+								<h1 class="h1-title max-w550">RECONSTRUCTIONS OF A PAST STILL TO COME</h1>
+								<!--don't change the order of elements in this section  -->
+								<div class="header__lower-signature">
+									<span >Shop Art </span> 
+									<div class="arrow-up-right" data-action = 'click' >
+										<svg class="icon">
+										  <use xlink:href="#top-right"></use>
+										</svg>
+									</div>
+									<!--don't change the order of elements in this section  -->
+								</div>
 							</div>
 						</div>
 					</div>
-					<div class="col-1 df alg-item-center">
+					<div class="col-6 pl50 pos-relative">
 						<div class="header__image-descr">
-									<p class="text-small">170x120 Spraypaint, Charcoal, Acrylic and Gesso on Canvas</p>
-									<span class="image-title">‘Mounir Le Raisonnable’</span>
+								<span class="image-title">‘Mounir Le Raisonnable’</span>
+								<p class="text-small">170x120 Spraypaint, Charcoal, Acrylic and Gesso on Canvas</p>
 						 </div>
-					</div>
-					<div class="col-5">
 						<div class="responsive-img h100">
-							<img src="../img/image_3.2.png" alt="Mounir Le Raisonnable">
+							<img src="img/image_3.2.png" alt="Mounir Le Raisonnable">
 						</div>
 					</div>
-					
 				</div>
 			</div>
 		</div>
@@ -86,7 +95,7 @@
 		</div>
 		<div class="overlay"></div>
 		<div class="slide-menu">
-			<div class="slide-menu__section ">
+			<div class="slide-menu__section mb20">
 				<div class="hamburger active">
 					<div></div>
 					<div></div>
@@ -150,9 +159,92 @@
 			
 		</div>
 </nav>
-<main>
+
+<aside class="aside-right">
+	<div class="icon-shop">
+		<svg class="icon">
+		  <use xlink:href="#cart"></use>
+		</svg>
+	</div>
+</aside>
+<main class="flex-container">
 	
 </main>
+<section>
+  <div class="overlay-bg"></div>
+	<div class="shopping-cart-wrapper">
+		<div class="sopping__top">
+			<span class="shopping__title ">Shopping cart</span>
+			<div class="icon-white-bag">
+				<span class="product-total">3</span>
+				<svg class="icon">
+				  <use xlink:href="#white-bag"></use>
+				</svg>
+			</div>
+		</div>
+		<div class="product-row text-white ">
+			<div class="shopping__row w100 ">
+				<div class="product__img">
+					<img src="img/SALIMA_LA_BIEN_AIMEE_ALEXANDER_KONING_icon.png" alt="SALIMA_LA_BIEN_AIMEE_ALEXANDER_KONING">
+				</div>
+				<div class="df w100 p20 bord-l-white">
+					<div class="product__descr">
+						<h3 class="product__title">‘Salima La Bien Aimée’</h3>
+						<span class="product__size">170 х 120 cm</span>
+						<p class="product__price">120<span class="price__currency text-upper">euro</span></p>
+					</div>
+					<div class="product__remove"></div>
+				</div>
+			</div>
+		</div>
+		<div class="product-row text-white ">
+			<div class="shopping__row w100 ">
+				<div class="product__img ">
+					<img src="img/Screenshot_2.png" alt="‘La vie en rose’">
+				</div>
+				<div class="df w100 p20 bord-l-white">
+					<div class="product__descr">
+						<h3 class="product__title">‘‘La vie en rose’’</h3>
+						<span class="product__size">170 х 120 cm</span>
+						<p class="product__price">120 <span class="price__currency text-upper"> euro</span></p>
+					</div>
+					<div class="product__remove"></div>
+				</div>
+			</div>
+		</div>
+		<div class="product-row text-white ">
+			<div class="shopping__row w100 ">
+				<div class="product__img">
+					<img src="img/Screenshot_1.png" alt="Momo">
+				</div>
+				<div class="df w100 p20 bord-l-white">
+					<div class="product__descr">
+						<h3 class="product__title">‘‘Momo’’</h3>
+						<span class="product__size">170 х 120 cm</span>
+						<p class="product__price">120 <span class="price__currency text-upper"> euro</span></p>
+					</div>
+					<div class="product__remove"></div>
+				</div>
+			</div>
+		</div>
+		<div class="shopping__bottom text-white">
+			<div class="shopping__row bord-b-white pl20pt15">
+				<a class="font14 ">Free shipping & Free returns</a>
+			</div>
+			<div class="shopping__row pl20pt15 jc-sb">
+				<span class="font14">Subtotal</span>
+				<span class="shopping__subtotal">360
+					<span class="price__currency text-upper">euro</span>
+					<span class="font14">360 EUR (ex. VAT)</span>
+				</span> 
+			</div>
+			<div class="shopping__row " data-hover="checkout__arrow">
+				<button class="checkout text-white pl20pt15 bg-red w100">Checkout</button>
+				
+			</div>
+		</div>
+	</div>
+</section>
 <footer>
 	
 </footer>
@@ -162,6 +254,20 @@
     <path fill-rule="evenodd" clip-rule="evenodd" d="M.619 6.161L5.69.67 5.073 0 0 5.492l.619.67z" fill="#fff"></path>
     <path fill-rule="evenodd" clip-rule="evenodd" d="M5.691 10.33L.62 4.84 0 5.509 5.073 11l.618-.67z" fill="#fff"></path>
     <path fill-rule="evenodd" clip-rule="evenodd" d="M12 5.026H.617v.948H12v-.948z" fill="#fff"></path>
+  </symbol>
+  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" id="top-right" width="100%" viewBox="0 0 11 11">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M.619 6.161L5.69.67 5.073 0 0 5.492l.619.67z" ></path>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M5.691 10.33L.62 4.84 0 5.509 5.073 11l.618-.67z" ></path>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 5.026H.617v.948H12v-.948z" ></path>
+  </symbol>
+  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" id="cart" width="100%" viewBox="0 0 22 22">
+    <path stroke="#fff" stroke-width="2" d="M20 21H0M1 6v15M19 6v15m1-14H0"></path>
+    <path d="M4 7l6-6 6 6" stroke="#fff"></path>
+  </symbol>
+  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" id="white-bag">
+    <path fill="#fff" d="M0 6h20v16H0z"></path>
+    <path stroke="#fff" stroke-width="2" d="M20 21H0M1 6v15M19 6v15m1-14H0"></path>
+    <path d="M4 7l6-6 6 6" stroke="#fff"></path>
   </symbol>
 </svg>
 <script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>	

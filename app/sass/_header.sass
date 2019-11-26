@@ -21,18 +21,23 @@
 	align-items: center
 	justify-content: space-between
 
+.version-wrapp
+	display: flex
+	align-items: center
+	justify-content: space-between
+	margin-left: 20px
+	width: 100%
+	opacity: 1
+	transition: 0.2s
+
 .header__image-descr
+	position: absolute
 	font-family: "Neue_light"
 	font-size: 16px
 	line-height: 24px
-	letter-spacing: 0.02em
-	writing-mode: vertical-lr
-	display: flex
-	flex-direction: column
-	align-items: flex-start
-	margin-left: auto
-	margin-right: -30px
-	transform: rotate(180deg)
+	top: 180px
+	left: -130px
+	transform: rotate(-90deg)
 
 .colection-version
 	display: flex
@@ -50,6 +55,23 @@
 .arrow-left
 	transform: rotate(180deg)
 
+.arrow-up-right
+	width: 50px
+	height: 50px
+	transform: rotate(135deg)
+	transition: 0.2s
+
+	&.active
+		transform: rotate(270deg)
+		transition: 0.2s
+		
+	.icon
+		width: 50px
+		height: 50px
+
+.arrow-up-right[data-action = 'click']
+	cursor: pointer
+
 .image-title
 	font-family: "Neue_light"
 	font-size: 16px
@@ -62,3 +84,17 @@
 		width: 100%
 		object-fit: cover
 
+.header__lower-signature
+	position: absolute
+	right: 0
+	bottom: 0
+	display: flex
+	align-items: flex-end
+	justify-content: space-between
+	min-width: 150px
+	span
+		font-family: "Neue_roman"
+		font-size: 23px
+		line-height: 32px
+#top-right
+	fill: $color-white

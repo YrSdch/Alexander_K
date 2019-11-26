@@ -1,0 +1,168 @@
+.shopping-cart-wrapper
+	width: 30%
+	height: 100%
+	min-height: 100vh
+	overflow-y: auto
+	position: fixed
+	top: 0
+	right: 0
+	background: $bg-black
+	border-left: 1px solid #FFFFFF
+	display: flex
+	flex-direction: column
+	justify-content: flex-start
+	transform: translateX(101%)
+	transition: 0.3s
+
+	&.active
+		transform: translateX(0)
+		transition: 0.3s
+
+
+
+.sopping__top
+	display: flex
+	justify-content: space-between
+	align-items: center
+	border-bottom: 1px solid #fff
+	padding: 20px
+
+.shopping__title
+	font-family: "Neue_light"
+	font-size: 14px
+	line-height: 21px
+	color: $text-gray
+
+.product-row
+	display: flex
+	border-bottom: 1px solid #fff
+
+.shopping__row
+	display: flex
+
+.icon-white-bag
+	display: flex
+	align-items: center
+	justify-content: center
+	width: 20px
+	height: 20px
+	cursor: pointer
+
+.product-total
+	font-family: "Neue_light"
+	font-size: 10px
+	line-height: 18px
+	position: absolute
+
+.product__img
+	padding: 20px
+	width: 30%
+	min-width: 30%
+	display: flex
+	align-items: center
+	justify-content: center
+
+.product__descr
+	width: 100%
+	display: flex
+	flex-direction: column
+	align-items: flex-start
+
+.product__title,
+.product__price
+	font-family: "Neue_light"
+	font-size: 14px
+	line-height: 21px
+
+.product__price
+	display: inline-block
+
+.product__size
+	font-family: "Neue_light"
+	font-size: 12px
+	line-height: 18px
+	letter-spacing: 0.02em
+	margin-bottom: 35px
+
+.product__remove
+	width: 10px
+	height: 10px
+	cursor: pointer
+	&:before,
+	&:after
+		content: ''
+		display: block
+		width: 100%
+		height: 1px
+		background: #fff
+	&:before
+		transform: rotate(45deg)
+		transform-origin: center
+		position: relative
+		top: 1px
+	&:after
+		transform: rotate(-45deg)
+		transform-origin: center
+
+.shopping__row
+	display: flex
+	align-items: center
+	a
+		display: block
+		text-decoration: none
+		position: relative
+		cursor: pointer
+		&::after
+			content: ''
+			position: absolute
+			bottom: 0px
+			left: 0
+			width: 100%
+			height: 1px
+			border-bottom: 1px dashed $color-light-gray
+			transform: scale(0)
+			transition: 0.2s
+	a:hover:after
+		transform: scale(1)
+
+.shopping__bottom 
+	margin-top: auto
+	margin-bottom: 0
+	border-top: 1px solid #fff
+
+.checkout
+	position: relative
+	display: flex
+	justify-content: flex-start
+	&:before,
+	&:after
+		content: ''
+		position: absolute
+		right: 20px
+		display: block
+		top: 50%
+
+	&:before
+		width: 10px
+		height: 10px
+		border-left: 1px solid #fff
+		border-bottom: 1px solid #fff
+		transform: translate(0, -50%) rotate(225deg)
+
+	&:after
+		width: 15px
+		height: 1px
+		background: #fff
+		transform: translate(0, -50%)
+		transition: 0.3s
+	&:hover
+		&:after
+			width: calc(100% - 120px)
+
+
+
+	
+
+
+
+

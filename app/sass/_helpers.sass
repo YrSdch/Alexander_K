@@ -4,6 +4,11 @@
 .df
 	display: flex
 
+.hidden
+	visibility: hidden
+	opacity: 0
+	transition: 0.2s
+
 .w100
 	width: 100%
 
@@ -18,19 +23,57 @@
 .min-h100vh
 	min-height: 100vh
 
+.mb20	
+	margin-bottom: 20px
+
 .ml20
 	margin-left: 20px
 
 .mt12mb13
 	margin-top: -12px
 	margin-bottom: 12px
+
+.max-w550
+	max-width: 550px
+
 .bg-black
 	background: $bg-black
+
+.bg-red
+	background: $bg-red
+
+.bord-b-white
+	border-bottom: 1px solid #fff
+
+.bord-b-black
+	border-bottom: 1px solid #000
+
+.bord-l-white
+	border-left: 1px solid #FFF
+
+.overlay-bg
+	display: none
+	position: fixed
+	background: rgba(0, 0, 0, 0.8)
+	top: 0
+	left: 0
+	right: 0
+	height: 100%
+	min-height: 100vh
+	&.active
+		display: block
+
+.pl50
+	padding-left: 50px
 
 .plr60
 	padding-left: 100px
 	padding-right: 60px
 
+.pl20pt15
+	padding: 15px 20px
+.p20
+	padding: 20px
 .pos-relative
 	position: relative
 
@@ -39,12 +82,15 @@
 
 .text-left
 	text-align: left!important
+
 .text-small
 	font-family: "Neue_light"
 	font-size: 0.75rem
 	line-height: 18px	
 	letter-spacing: 0.02em
 
+.text-upper
+	text-transform: uppercase
 .icon
   width: 25px
   height: 25px
@@ -57,3 +103,8 @@
 .stop-scroll
 	height: 100vh
 	overflow: hidden
+
+.jc-sb
+	justify-content: space-between
+
+
