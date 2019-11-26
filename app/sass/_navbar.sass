@@ -1,0 +1,133 @@
+.navbar,
+.slide-menu
+	padding: 25px 0
+	position: fixed
+	top: 0
+	left: 0
+	height: 100%
+	border-right: 1px solid #FFFFFF
+	display: flex
+
+.navbar
+	width: 60px
+	flex-direction: column
+	align-items: center
+
+.slide-menu
+	width: 20%
+	background: $bg-black
+	display: flex
+	flex-direction: column
+	align-items: flex-start
+	justify-content: flex-start
+	padding-left: 20px 
+	padding-bottom: 20px
+	overflow-y: auto
+	transform: translateX(-101%)
+	transition: 0.3s
+	z-index: 10
+
+.slide-menu.active
+	transform: translateX(0)
+
+.hamburger
+	width: 20px
+	height: 17px
+	cursor: pointer
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+	margin-top: 0
+	margin-bottom: auto
+	div
+		width: 100%
+		height: 2px
+		background: $bg-white
+
+		&:nth-child(2)
+			margin: 5px 0
+
+.hamburger.active
+	transform: rotate(90deg)	
+.navbar__links
+	// writing-mode: vertical-lr
+	color: $text-white
+	transform: rotate(180deg)
+	margin: auto
+
+	ul
+		display: flex
+		flex-direction: column
+
+.slide-menu__section
+	width: 100%
+	padding: 12px 0
+
+.navbar__links-item,
+.slide-menu__section
+	list-style-type: none
+	letter-spacing: 2%
+	a
+		display: block
+		color: $text-light-gray
+		font-family: 'Neue_light'
+		font-size: 0.875
+		text-decoration: none
+		position: relative
+
+		&::before
+			content: ''
+			position: absolute
+			bottom: 20px
+			left: 0
+			width: 100%
+			height: 1px
+			border-bottom: 1px dashed $color-light-gray
+			transition: 0.2s
+	a:hover:before
+		transform: scale(1)
+
+.navbar
+	a
+		padding: 20px 0		
+		text-align: center
+		&::before
+			bottom: 20px
+			transform: scale(0)
+	a:hover:before
+		transform: scale(1)
+
+.slide-menu__section
+	a
+		padding: 10px 0
+		&::before
+			bottom: 6px
+			width: 0
+	a:hover:before
+		width: 100%
+
+.menu-separator
+	width: calc(100% + 20px)
+	transform: translateX(-20px)
+	height: 1px 
+	background: $color-white
+
+.overlay
+	display: none
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	height: 100%
+	background: rgba(0, 0, 0, 0.8)
+	z-index: 5
+	
+.overlay.active
+		display: block
+
+
+
+
+
+
+	
