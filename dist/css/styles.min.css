@@ -4656,6 +4656,15 @@ ul {
 }
 
 body {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   overflow-x: hidden;
   position: relative;
 }
@@ -4673,10 +4682,6 @@ button {
 /*!=================================
  header css styles
  @mixin ==================================*/
-header {
-  margin-bottom: -25px;
-}
-
 .site-header {
   min-height: 100vh;
 }
@@ -4762,7 +4767,7 @@ header {
   font-size: 16px;
   line-height: 24px;
   top: 180px;
-  left: -130px;
+  left: -190px;
   -webkit-transform: rotate(-90deg);
       -ms-transform: rotate(-90deg);
           transform: rotate(-90deg);
@@ -4840,7 +4845,7 @@ header {
 }
 
 .responsive-img img {
-  height: 100%;
+  height: 100vh;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -5478,10 +5483,7 @@ header {
  aside-right css styles
  @mixin ==================================*/
 /*!=================================
- media-queries css styles
- @mixin ==================================*/
-/*!=================================
- media-queries css styles
+ helpers classes styles
  @mixin ==================================*/
 .alg-item-center {
   -webkit-box-align: center;
@@ -5658,3 +5660,177 @@ header {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+
+/*!=================================
+ helpers classes styles
+ @mixin ==================================*/
+/*!=================================
+ media-queries css styles
+ @mixin ==================================*/
+@media screen and (max-width: 1240px) {
+  .h1-title {
+    font-size: 48px;
+    line-height: 60px;
+  }
+  .h2-title {
+    font-size: 32px;
+    line-height: 42px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .h1-title {
+    font-size: 36px;
+    line-height: 48px;
+  }
+  .h2-title {
+    font-size: 28px;
+    line-height: 38px;
+  }
+  .min-h100vh {
+    height: auto;
+    min-height: auto;
+  }
+  .responsive-height {
+    min-height: 100vh;
+    height: 100%;
+  }
+  .responsive-img img {
+    height: auto;
+    max-width: 475px;
+  }
+  .tablet-aligm {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+    -webkit-align-items: flex-end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .plr60 {
+    padding-right: 0px;
+  }
+  .navbar {
+    border-right: none;
+  }
+  .navbar__links {
+    display: none;
+  }
+  .slide-menu,
+  .shopping-cart-wrapper {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    overflow-x: auto;
+  }
+  .h1-title {
+    font-size: 34px;
+    line-height: 55px;
+  }
+  .h2-title {
+    font-size: 32px;
+    line-height: 42px;
+  }
+  .header__bottom {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .header__lower-signature {
+    position: relative;
+    max-width: 150px;
+  }
+  .plr60 {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .plr-responsive60 {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  .header__top {
+    margin: auto auto 65px auto;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .version-wrapp {
+    display: none;
+  }
+  .slide-item {
+    width: 100%;
+  }
+  .current {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .pl50 {
+    padding: 0;
+  }
+  .responsive-img img {
+    max-width: 100%;
+  }
+  .header__image-descr {
+    -webkit-box-ordinal-group: 3;
+    -webkit-order: 2;
+        -ms-flex-order: 2;
+            order: 2;
+    padding: 20px;
+    position: relative;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .header__bottom {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .h1-title {
+    font-size: 24px;
+    line-height: 34px;
+  }
+  .plr-responsive60 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .header__lower-signature {
+    -webkit-align-self: flex-end;
+        -ms-flex-item-align: end;
+            align-self: flex-end;
+  }
+  .slide-menu,
+  .shopping-cart-wrapper {
+    width: 100%;
+  }
+}
+
+/*!=================================
+ media-queries css styles
+ @mixin ==================================*/
