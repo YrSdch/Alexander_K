@@ -92,5 +92,51 @@ collection versions in header(homepage) functions
 	fadeHeaderPrev('.arrow-left', '[data-slide=collec-title]');
 	fadeHeaderPrev('.arrow-left', '[data-slide=collec-ver]');
 
+/*=================== rotate arrow 
+=======================*/
+
+/*=================== swipe function
+=======================*/
+	jQuery('header').swipe({
+		 swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
+		 	if (direction == 'left') {
+		 		function slideLeft(dataSlide){
+		 			var currentEl = $('.current'+dataSlide);
+					var currentElIndex = currentEl.index();
+					var prevtElIndex = currentElIndex - 1;
+					var prevtEl = $(dataSlide).eq(prevtElIndex);
+					currentEl.hide();
+					currentEl.removeClass('current');
+					prevtEl.show();
+					prevtEl.addClass('current')
+		 		}
+		 		slideLeft('[data-slide=collec-img]')
+		 		slideLeft('[data-slide=collec-title]')			
+		 		slideLeft('[data-slide=collec-ver]')
+      }
+      if (direction == 'right') {
+        function slideRight(dataSlide){
+        	var currentEl = $('.current'+dataSlide);
+					var currentElIndex = currentEl.index();
+					var nextElIndex = currentElIndex + 1;
+					var nextEl = $(dataSlide).eq(nextElIndex);
+					currentEl.hide();
+					currentEl.removeClass('current');
+					if(nextElIndex == $(dataSlide+':last').index()+1){
+						$(dataSlide).eq(0).fadeIn();
+						$(dataSlide).eq(0).addClass('current');
+					} else {
+						nextEl.show();
+						nextEl.addClass('current');
+					}
+        }
+        slideRight('[data-slide=collec-img]')
+        slideRight('[data-slide=collec-title]')
+        slideRight('[data-slide=collec-ver]')
+      }
+		 },
+		});
+/*=================== swipe function 
+=======================*/
 	
 });
