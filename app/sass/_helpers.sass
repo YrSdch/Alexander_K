@@ -4,6 +4,10 @@
 .df
 	display: flex
 
+.current.flex-col
+	display: flex
+	flex-direction: column
+
 .hidden
 	visibility: hidden
 	opacity: 0
@@ -21,6 +25,7 @@
 	height: 100%
 
 .min-h100vh
+	height: 100%
 	min-height: 100vh
 
 .mb20	
@@ -35,6 +40,9 @@
 
 .max-w550
 	max-width: 550px
+
+.max-w250
+	max-width: 250px
 
 .bg-black
 	background: $bg-black
@@ -62,6 +70,7 @@
 	min-height: 100vh
 	&.active
 		display: block
+
 
 .pl50
 	padding-left: 50px

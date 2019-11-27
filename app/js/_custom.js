@@ -30,11 +30,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	})
 
-	slideMenu('.hamburger', '.slide-menu', '.overlay');
-	slideMenu('.icon-shop', '.shopping-cart-wrapper', '.overlay-bg');
 	
-	hideMenuBg('.overlay-bg', '.shopping-cart-wrapper')
-	hideMenuBg('.overlay', '.slide-menu')
 
 /*===================slide menu functions=======================*/
 	$('.arrow-up-right').click(function(){
@@ -43,7 +39,58 @@ document.addEventListener("DOMContentLoaded", function() {
 		$(this).parent('.header__lower-signature').find('span').toggleClass('hidden');
 	})
 
+/*=================== the functions of the slides of 
+collection versions in header(homepage) functions 
+=======================*/
+		function fadeHeaderNext(elem, dataSlide){
+			$(elem).click(function(){
+				var currentEl = $('.current'+dataSlide);
+				var currentElIndex = currentEl.index();
+				var nextElIndex = currentElIndex + 1;
+				var nextEl = $(dataSlide).eq(nextElIndex);
+				currentEl.hide();
+				currentEl.removeClass('current');
+				if(nextElIndex == $(dataSlide+':last').index()+1){
+					$(dataSlide).eq(0).fadeIn();
+					$(dataSlide).eq(0).addClass('current');
+				} else {
+					nextEl.show();
+					nextEl.addClass('current');
+				}
+			})
+		}
+		function fadeHeaderPrev(elem, dataSlide){
+			$(elem).click(function(){
+				var currentEl = $('.current'+dataSlide);
+				var currentElIndex = currentEl.index();
+				var prevtElIndex = currentElIndex - 1;
+				var prevtEl = $(dataSlide).eq(prevtElIndex);
+				currentEl.hide();
+				currentEl.removeClass('current');
+				prevtEl.show();
+				prevtEl.addClass('current')
+				
+			})
+		}
+/*=================== the functions of the slides of 
+collection versions in header(homepage) functions 
+=======================*/
+/*=================== rotate arrow 
+=======================*/
 	
-	
+
+	slideMenu('.hamburger', '.slide-menu', '.overlay');
+	slideMenu('.icon-shop', '.shopping-cart-wrapper', '.overlay-bg');
+	hideMenuBg('.overlay-bg', '.shopping-cart-wrapper')
+	hideMenuBg('.overlay', '.slide-menu')
+
+	fadeHeaderNext('.arrow-right', '[data-slide=collec-img]');
+	fadeHeaderNext('.arrow-right', '[data-slide=collec-title]');
+	fadeHeaderNext('.arrow-right', '[data-slide=collec-ver]');
+
+	fadeHeaderPrev('.arrow-left', '[data-slide=collec-img]');
+	fadeHeaderPrev('.arrow-left', '[data-slide=collec-title]');
+	fadeHeaderPrev('.arrow-left', '[data-slide=collec-ver]');
+
 	
 });

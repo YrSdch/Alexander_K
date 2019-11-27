@@ -1,3 +1,5 @@
+header
+	margin-bottom: -25px
 .site-header
 	min-height: 100vh
 
@@ -31,6 +33,8 @@
 	transition: 0.2s
 
 .header__image-descr
+	display: flex
+	flex-direction: column
 	position: absolute
 	font-family: "Neue_light"
 	font-size: 16px
@@ -52,17 +56,20 @@
 	height: 25px
 	cursor: pointer
 
-.arrow-left
+.arrow-right
 	transform: rotate(180deg)
 
 .arrow-up-right
+	display: flex
 	width: 50px
 	height: 50px
 	transform: rotate(135deg)
 	transition: 0.2s
+	position: relative
 
 	&.active
 		transform: rotate(270deg)
+		transform-origin: center center
 		transition: 0.2s
 		
 	.icon
@@ -96,5 +103,55 @@
 		font-family: "Neue_roman"
 		font-size: 23px
 		line-height: 32px
-#top-right
-	fill: $color-white
+
+.arrow-up-right.active
+	.icon-large
+		&:before
+			border-left: 3px solid $color-red
+			border-bottom: 3px solid $color-red
+		&:after
+			background: $bg-red
+		
+
+.arrow-up-right
+	.icon-large
+		&:hover
+			&:before
+				border-left: 3px solid $color-red
+				border-bottom: 3px solid $color-red
+		&:hover
+			&:after
+				background: $bg-red
+				
+.icon-large
+	position: relative
+	display: flex
+	justify-content: center
+	transform: rotate(180deg)
+	&:before,
+	&:after
+		content: ''
+		position: absolute
+		right: 20px
+		display: block
+		top: 50%
+
+	&:before
+		width: 26px
+		height: 26px
+		border-left: 3px solid #fff
+		border-bottom: 3px solid #fff
+		transform: translate(0, -50%) rotate(225deg)
+
+	&:after
+		width: 35px
+		height: 3px
+		background: #fff
+		transform: translate(0, -50%)
+		transition: 0.3s 
+
+[data-slide]
+	display: none
+
+.current[data-slide]
+	display: flex
