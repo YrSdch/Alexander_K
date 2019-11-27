@@ -34,6 +34,11 @@
 		align-items: flex-end
 		justify-content: flex-end
 
+	.tablet-hidden
+		display: none
+
+	.tablet-visible
+		display: flex
 	.plr60
 		padding-right: 0px
 	
@@ -47,6 +52,21 @@
 	.shopping-cart-wrapper
 		width: 50%
 
+	.about-page
+		.site-header
+			min-height: auto
+		.header__top
+			padding-left: 40px
+		.header__bottom 
+			padding-top: 226px
+		.responsive-height
+			height: auto
+			min-height: auto
+	&.plr60
+		padding-left: 20px
+	.text-section
+		width: 100%
+		max-width: 100%
 
 @media screen and (max-width: 768px)
 	body
@@ -102,7 +122,24 @@
 		left: 0
 		transform: rotate(0deg)
 
+	.mobile-hidden
+		display: none
+	.mobile-visible
+		display: flex
+	.map-bg
+		width: 90%
+		top: 0
+		right: 0
+	.ml40
+		margin-left: 40px
+		margin-right: auto
+	.work-areas
+		padding-left: 20px
+		padding-right: 20px
+
 @media screen and (max-width: 576px)
+	.w600
+		width: 600px
 	.header__bottom
 		flex-direction: column
 
@@ -120,4 +157,26 @@
 	.slide-menu,
 	.shopping-cart-wrapper
 		width: 100%
+
+	.work-areas::-webkit-scrollbar
+		display: none
+
+	.work-areas
+		overflow-x: scroll
+		-webkit-overflow-scrolling: touch
+		// &:after
+		// 	content: ''
+		// 	display: block
+		// 	width: 100px
+		// 	position: absolute
+		// 	top: 0
+		// 	bottom: 0
+		// 	right: 0
+		// 	background: linear-gradient(to right, transparent, $color-black)
+
+	.separate-photo
+		display: none
+	.text-multi-col
+		width: 100%
+		max-width: 100%
 

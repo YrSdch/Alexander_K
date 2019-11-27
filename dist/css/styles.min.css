@@ -4619,25 +4619,25 @@ a:focus {
 }
 
 .font23 {
-  font-family: 'Neue_light';
+  font-family: 'Neue_roman';
   font-size: 23px;
   line-height: 32px;
 }
 
 .font32 {
-  font-family: 'Neue_light';
+  font-family: 'Neue_roman';
   font-size: 32px;
   line-height: 42px;
 }
 
 .font46 {
-  font-family: 'Neue_light';
+  font-family: 'Neue_roman';
   font-size: 46px;
   line-height: 60px;
 }
 
 .font60 {
-  font-family: 'Neue_light';
+  font-family: 'Neue_roman';
   font-size: 60px;
   line-height: 72px;
 }
@@ -5193,7 +5193,7 @@ button {
  aside-right css styles
  @mixin ==================================*/
 /*!=================================
- aside-right css styles
+ shoping-cart css styles
  @mixin ==================================*/
 .shopping-cart-wrapper {
   width: 30%;
@@ -5480,7 +5480,215 @@ button {
 }
 
 /*!=================================
- aside-right css styles
+ shoping-cart css styles
+ @mixin ==================================*/
+/*!=================================
+ about styles
+ @mixin ==================================*/
+.text-section {
+  width: 100%;
+  max-width: 480px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.signature {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.awards-item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.awards__date {
+  width: 15%;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.awards__name {
+  width: calc(100% -  10px);
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.right-col-img {
+  margin-bottom: 40px;
+}
+
+.right-col-img img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: relative;
+  z-index: 1;
+}
+
+.map-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  right: -480px;
+  top: -80px;
+  z-index: 0;
+}
+
+.work-areas__list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: calc(100%/3 - 25px);
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.workareas__name {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.work-areas {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.work-arrow {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  font-family: 'Neue_roman';
+  font-size: 23px;
+  line-height: 32px;
+  min-width: 200px;
+}
+
+.work-arrow span {
+  margin-right: 15px;
+}
+
+.text-multi-col {
+  -webkit-column-count: 2;
+     -moz-column-count: 2;
+          column-count: 2;
+  -webkit-column-gap: 30px;
+     -moz-column-gap: 30px;
+          column-gap: 30px;
+  max-width: 60%;
+}
+
+.separate-photo {
+  margin-left: 30px;
+}
+
+.btn-about-pg {
+  padding: 11px 20px;
+  background: none;
+  outline: none;
+}
+
+.btn-about-pg:hover {
+  background: #CF4C4C;
+  border: 1px solid #CF4C4C;
+}
+
+/*!=================================
+ about styles
+ @mixin ==================================*/
+/*!=================================
+ footer styles
+ @mixin ==================================*/
+.site-footer {
+  padding-left: 75px;
+  padding-right: 75px;
+}
+
+.footer__item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 30px 40px 35px;
+  border-top: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
+}
+
+.footer__item:nth-child(2) {
+  border-left: 1px solid #ffffff;
+  border-right: 1px solid #ffffff;
+}
+
+.footer__item:nth-child(3) {
+  border-right: 1px solid #ffffff;
+}
+
+/*!=================================
+ footer styles
  @mixin ==================================*/
 /*!=================================
  helpers classes styles
@@ -5490,6 +5698,11 @@ button {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.alig-left {
+  margin-left: 0;
+  margin-right: auto;
 }
 
 .df {
@@ -5523,10 +5736,18 @@ button {
   width: 100%;
 }
 
+.w50 {
+  width: 50%;
+}
+
 .white-line {
   width: 37px;
   height: 1px;
   background: #ffffff;
+}
+
+.white-border {
+  border: 1px solid #ffffff;
 }
 
 .h100 {
@@ -5538,17 +5759,34 @@ button {
   min-height: 100vh;
 }
 
+.mb15 {
+  margin-bottom: 15px;
+}
+
 .mb20 {
   margin-bottom: 20px;
+}
+
+.mb30 {
+  margin-bottom: 30px;
 }
 
 .ml20 {
   margin-left: 20px;
 }
 
+.alig-left {
+  margin-left: 0;
+  margin-right: auto;
+}
+
 .mt12mb13 {
   margin-top: -12px;
   margin-bottom: 12px;
+}
+
+.mt10 {
+  margin-top: 10px;
 }
 
 .max-w550 {
@@ -5615,6 +5853,22 @@ button {
   position: relative;
 }
 
+.rotate135 {
+  cursor: pointer;
+}
+
+.rotate135 svg {
+  -webkit-transform: rotate(135deg);
+      -ms-transform: rotate(135deg);
+          transform: rotate(135deg);
+  width: 15px;
+  height: 15px;
+}
+
+.section-wrapper {
+  padding: 40px 0;
+}
+
 .text-white {
   color: #ffffff;
 }
@@ -5632,6 +5886,14 @@ button {
 
 .text-upper {
   text-transform: uppercase;
+}
+
+.tablet-visible {
+  display: none;
+}
+
+.mobile-visible {
+  display: none;
 }
 
 .icon {
@@ -5713,6 +5975,15 @@ button {
         -ms-flex-pack: end;
             justify-content: flex-end;
   }
+  .tablet-hidden {
+    display: none;
+  }
+  .tablet-visible {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
   .plr60 {
     padding-right: 0px;
   }
@@ -5725,6 +5996,26 @@ button {
   .slide-menu,
   .shopping-cart-wrapper {
     width: 50%;
+  }
+  .about-page .site-header {
+    min-height: auto;
+  }
+  .about-page .header__top {
+    padding-left: 40px;
+  }
+  .about-page .header__bottom {
+    padding-top: 226px;
+  }
+  .about-page .responsive-height {
+    height: auto;
+    min-height: auto;
+  }
+  .plr60 {
+    padding-left: 20px;
+  }
+  .text-section {
+    width: 100%;
+    max-width: 100%;
   }
 }
 
@@ -5802,9 +6093,34 @@ button {
         -ms-transform: rotate(0deg);
             transform: rotate(0deg);
   }
+  .mobile-hidden {
+    display: none;
+  }
+  .mobile-visible {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .map-bg {
+    width: 90%;
+    top: 0;
+    right: 0;
+  }
+  .ml40 {
+    margin-left: 40px;
+    margin-right: auto;
+  }
+  .work-areas {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 @media screen and (max-width: 576px) {
+  .w600 {
+    width: 600px;
+  }
   .header__bottom {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -5828,6 +6144,20 @@ button {
   .slide-menu,
   .shopping-cart-wrapper {
     width: 100%;
+  }
+  .work-areas::-webkit-scrollbar {
+    display: none;
+  }
+  .work-areas {
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+  .separate-photo {
+    display: none;
+  }
+  .text-multi-col {
+    width: 100%;
+    max-width: 100%;
   }
 }
 

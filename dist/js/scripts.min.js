@@ -5,6 +5,8 @@
 
 document.addEventListener("DOMContentLoaded", function() {
 
+	 
+	
 	/*===================slide menu functions=======================*/
 	
 	function slideMenu (clickElem, target, overlay){
@@ -136,6 +138,14 @@ collection versions in header(homepage) functions
       }
 		 },
 		});
+	$(window).resize(function(){
+		setMargin()
+	})
+	function setMargin(){
+		var marg = $('[data-margin=propaganda]').offset().left - 20
+		$('#setOffset').offset({left: marg})
+	}
+	setMargin()
 /*=================== swipe function 
 =======================*/
 	
