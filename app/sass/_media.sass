@@ -68,7 +68,36 @@
 		width: 100%
 		max-width: 100%
 
+	.site-footer
+		padding-left: 14px
+		padding-right: 14px
+
+	.footer__item
+		&:nth-child(1)
+			// max-width: 340px
+			align-items: center
+			justify-content: center
+			p
+				max-width: 330px
+				text-align: center
+
+	.footer__item
+	&:nth-child(3)
+		&:after
+			content:
+
+	.footer__bottom
+		&:nth-child(1),
+		&:nth-child(2)
+			border-bottom: 1px solid $color-white
+	
 @media screen and (max-width: 768px)
+	.border-l-r-white
+		border-right: none
+		border-left: none
+	.site-footer
+		padding-left: 15px
+		padding-right: 15px
 	body
 		overflow-x: auto
 	.h1-title

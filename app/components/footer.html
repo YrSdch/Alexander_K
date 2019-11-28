@@ -1,31 +1,108 @@
 <div class="text-white bg-black">
 	<div class="site-footer">
-		<div class="row">
-			<div class="col-4 footer__item">
+		<!-- show this row on mobile -->
+		<div class="row mobile-visible">
+			<div class="col-12 col-lg-4 footer__item ">
 				<img src="img/site_logo.png" class="mb20" title="alexander koning">
 				<p class="font12">Maecenas sollicitudin amet, lobortis ante mattis aliquam ut lobortis. Rutrum consectetur diam sodales lorem dignissim.</p>
 			</div>
-			<div class="col-4 footer__item">
-				<h3 class="footer__title">Subscribe to  the newsletter</h3>
-				<form class="black-input">
-					<input class="black-field" type="" name="">
-					<button class="font14 text-white transparent-btn">submit</button>
+		</div>
+		<div class="row mobile-visible">
+			<div class="col-12 col-lg-4 col-md-6 footer__item mobile-hidden">
+				<h3 class="footer__title mb20">Subscribe to  the newsletter</h3>
+				<form class="black-input w100">
+					<input class="black-field w100" type="" name="" placeholder="Get on the list">
+					<button class="font14 text-white transparent-btn">Submit</button>
 				</form>
 			</div>
-			<div class="col-4 footer__item">
-				<h3 class="footer__title">Questions?</h3>
+		</div>
+		<div class="row mobile-visible">
+			<div class="col-12 col-lg-4 col-md-6 footer__item mobile-hidden">
+				<h3 class="footer__title mb20">Questions?</h3>
 				<div class="row contact">
 					<div class="col-6">
-						<p class="font12">Phone</p>
-						<a class="font12" href="tel: +2175550113">(217) 555-0113</a>
+						<p class="font12 ">Phone</p>
+						<a class="font12 text-white" href="tel: +2175550113">(217) 555-0113</a>
 					</div>
 					<div class="col-6">
 						<p class="font12">Email</p>
-						<a class="font12" href="mailto:mail@alexanderkoning.nl">mail@alexanderkoning.nl</a>
+						<a class="font12 text-white" href="mailto:mail@alexanderkoning.nl">mail@alexanderkoning.nl</a>
 					</div>
 				</div>
-
 			</div>
+		</div>
+		<!-- show this row on mobile -->
+		<!-- hide this row on mobile for some reason it does a large horizontal scroll-->
+		<div class="row">
+			<div class="col-12 col-lg-4 footer__item mobile-hidden">
+				<img src="img/site_logo.png" class="mb20" title="alexander koning">
+				<p class="font12">Maecenas sollicitudin amet, lobortis ante mattis aliquam ut lobortis. Rutrum consectetur diam sodales lorem dignissim.</p>
+			</div>
+			<div class="col-12 col-lg-4 col-md-6 footer__item mobile-hidden">
+				<h3 class="footer__title mb20">Subscribe to  the newsletter</h3>
+				<form class="black-input w100">
+					<input class="black-field w100" type="" name="" placeholder="Get on the list">
+					<button class="font14 text-white transparent-btn">Submit</button>
+				</form>
+			</div>
+			<div class="col-12 col-lg-4 col-md-6 footer__item mobile-hidden">
+				<h3 class="footer__title mb20">Questions?</h3>
+				<div class="row contact">
+					<div class="col-6">
+						<p class="font12 ">Phone</p>
+						<a class="font12 text-white" href="tel: +2175550113">(217) 555-0113</a>
+					</div>
+					<div class="col-6">
+						<p class="font12">Email</p>
+						<a class="font12 text-white" href="mailto:mail@alexanderkoning.nl">mail@alexanderkoning.nl</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- hide this row on mobile for some reason it does a large horizontal scroll-->
+		<div class="row">
+			<div class="col-lg-8 col-md-12 footer__bottom ">
+				<div class="row alig-left w100">
+					<!-- hide this section on tablet -->
+					<div class="col-4 footer__bottom-item tablet-hidden">
+						<p class="font12">© Alexander Koning 2019</p>
+					</div>
+					<!-- hide this section on tablet -->
+					<div class="col-6 col-lg-2 footer__bottom-item">
+						<a href="#" class="font12 text-white">Privacy Policy</a>
+					</div>
+					<div class="col-6 col-lg-2 footer__bottom-item">
+						<a href="#" class="font12 text-white">Cookies Policy</a>
+					</div>
+					<div class="col-6 col-lg-2 footer__bottom-item">
+						<a href="#" class="font12 text-white">Shipping & Returns</a>
+					</div>
+					<div class="col-6 col-lg-2 footer__bottom-item">
+						<a href="#" class="font12 text-white">Payment Methods</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-12 footer__bottom border-l-r-white">
+				<div class="row w100">
+					<div class="col-3 footer__bottom-item">
+						<a href="#" class="font12 text-white">Instagram</a>
+					</div>
+					<div class="col-3 footer__bottom-item">
+						<a href="#" class="font12 text-white">Facebook</a>
+					</div>
+					<div class="col-3 footer__bottom-item">
+						<a href="#" class="font12 text-white">Vimeo</a>
+					</div>
+					<div class="col-3 footer__bottom-item">
+						<a href="#" class="font12 text-white">Tumblr</a>
+					</div>
+				</div>
+			</div>
+				<!-- show this section on tablet -->
+			<div class="col-12 footer__bottom-item tablet-visible df jc-c">
+						<p class="font12">© Alexander Koning 2019</p>
+			</div>
+				<!-- show this section on tablet -->
 		</div>
 	</div>
 </div>

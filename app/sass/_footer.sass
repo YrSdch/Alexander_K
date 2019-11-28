@@ -14,3 +14,53 @@
 		border-right: 1px solid $color-white
 	&:nth-child(3)
 		border-right: 1px solid $color-white
+		position: relative
+		&:after
+			content: ''
+			position: absolute
+			display: block
+			width: 60px
+			height: 1px
+			background: $bg-white
+			right: -60px
+			top: -1px
+.footer__bottom
+	display: flex
+	align-items: center
+	justify-content: center
+	&:last-child()
+		border-left: 1px solid $color-white
+		border-right: 1px solid $color-white
+.footer__bottom-item
+	&:first-child()
+		padding-left: 25px
+	padding: 15px 10px
+	a
+		display: block
+		text-decoration: none
+		position: relative
+		&::before
+			content: ''
+			position: absolute
+			bottom: -5px
+			left: 0
+			width: 0
+			height: 1px
+			border-bottom: 1px dashed $color-light-gray
+			transition: 0.2s
+	a:hover:before
+		width: 100%
+
+.black-input
+	position: relative
+	display: flex
+	align-items: center
+.black-field
+	background: $bg-black
+	outline: none
+	border: none
+	border-bottom: 1px solid $color-white
+
+.transparent-btn
+	position: absolute
+	right: 0

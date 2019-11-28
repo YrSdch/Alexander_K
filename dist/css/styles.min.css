@@ -4676,6 +4676,10 @@ button {
   cursor: pointer;
 }
 
+a {
+  text-decoration: none;
+}
+
 /*!=================================
  custom css styles
  @mixin ==================================*/
@@ -5485,6 +5489,10 @@ button {
 /*!=================================
  about styles
  @mixin ==================================*/
+.about-page {
+  overflow-x: hidden;
+}
+
 .text-section {
   width: 100%;
   max-width: 480px;
@@ -5685,6 +5693,93 @@ button {
 
 .footer__item:nth-child(3) {
   border-right: 1px solid #ffffff;
+  position: relative;
+}
+
+.footer__item:nth-child(3):after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 60px;
+  height: 1px;
+  background: #ffffff;
+  right: -60px;
+  top: -1px;
+}
+
+.footer__bottom {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer__bottom:last-child {
+  border-left: 1px solid #ffffff;
+  border-right: 1px solid #ffffff;
+}
+
+.footer__bottom-item {
+  padding: 15px 10px;
+}
+
+.footer__bottom-item:first-child {
+  padding-left: 25px;
+}
+
+.footer__bottom-item a {
+  display: block;
+  text-decoration: none;
+  position: relative;
+}
+
+.footer__bottom-item a::before {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  border-bottom: 1px dashed #F2F2F2;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.footer__bottom-item a:hover:before {
+  width: 100%;
+}
+
+.black-input {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.black-field {
+  background: #111111;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #ffffff;
+}
+
+.transparent-btn {
+  position: absolute;
+  right: 0;
 }
 
 /*!=================================
@@ -5703,6 +5798,13 @@ button {
 .alig-left {
   margin-left: 0;
   margin-right: auto;
+}
+
+.jc-c {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .df {
@@ -5775,6 +5877,10 @@ button {
   margin-left: 20px;
 }
 
+.ml-15 {
+  margin-left: -15px;
+}
+
 .alig-left {
   margin-left: 0;
   margin-right: auto;
@@ -5815,6 +5921,11 @@ button {
 
 .bord-l-white {
   border-left: 1px solid #FFF;
+}
+
+.border-l-r-white {
+  border-left: 1px solid #FFF;
+  border-right: 1px solid #FFF;
 }
 
 .overlay-bg {
@@ -6017,9 +6128,38 @@ button {
     width: 100%;
     max-width: 100%;
   }
+  .site-footer {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+  .footer__item:nth-child(1) {
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .footer__item:nth-child(1) p {
+    max-width: 330px;
+    text-align: center;
+  }
+  .footer__bottom:nth-child(1), .footer__bottom:nth-child(2) {
+    border-bottom: 1px solid #ffffff;
+  }
 }
 
 @media screen and (max-width: 768px) {
+  .border-l-r-white {
+    border-right: none;
+    border-left: none;
+  }
+  .site-footer {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
   body {
     overflow-x: auto;
   }
