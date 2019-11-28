@@ -5,6 +5,7 @@
 
 document.addEventListener("DOMContentLoaded", function() {
 
+	const player = new Plyr('#player');
 	 
 	
 	/*===================slide menu functions=======================*/
@@ -35,11 +36,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	
 
 /*===================slide menu functions=======================*/
-	$('.arrow-up-right').click(function(){
-		$(this).toggleClass('active');
-		$('.version-wrapp').toggleClass('hidden');
-		$(this).parent('.header__lower-signature').find('span').toggleClass('hidden');
-	})
+	
 
 /*=================== the functions of the slides of 
 collection versions in header(homepage) functions 
@@ -79,20 +76,13 @@ collection versions in header(homepage) functions
 =======================*/
 /*=================== rotate arrow 
 =======================*/
+	$('.arrow-up-right').click(function(){
+		$(this).toggleClass('active');
+		$('.version-wrapp').toggleClass('hidden');
+		$(this).parent('.header__lower-signature').find('span').toggleClass('hidden');
+	})
+
 	
-
-	slideMenu('.hamburger', '.slide-menu', '.overlay');
-	slideMenu('.icon-shop', '.shopping-cart-wrapper', '.overlay-bg');
-	hideMenuBg('.overlay-bg', '.shopping-cart-wrapper')
-	hideMenuBg('.overlay', '.slide-menu')
-
-	fadeHeaderNext('.arrow-right', '[data-slide=collec-img]');
-	fadeHeaderNext('.arrow-right', '[data-slide=collec-title]');
-	fadeHeaderNext('.arrow-right', '[data-slide=collec-ver]');
-
-	fadeHeaderPrev('.arrow-left', '[data-slide=collec-img]');
-	fadeHeaderPrev('.arrow-left', '[data-slide=collec-title]');
-	fadeHeaderPrev('.arrow-left', '[data-slide=collec-ver]');
 
 /*=================== rotate arrow 
 =======================*/
@@ -139,9 +129,19 @@ collection versions in header(homepage) functions
 		 },
 		});
 
-	const player = new Plyr('#player');
 
-	
+	slideMenu('.hamburger', '.slide-menu', '.overlay');
+	slideMenu('.icon-shop', '.shopping-cart-wrapper', '.overlay-bg');
+	hideMenuBg('.overlay-bg', '.shopping-cart-wrapper')
+	hideMenuBg('.overlay', '.slide-menu')
+
+	fadeHeaderNext('.arrow-right', '[data-slide=collec-img]');
+	fadeHeaderNext('.arrow-right', '[data-slide=collec-title]');
+	fadeHeaderNext('.arrow-right', '[data-slide=collec-ver]');
+
+	fadeHeaderPrev('.arrow-left', '[data-slide=collec-img]');
+	fadeHeaderPrev('.arrow-left', '[data-slide=collec-title]');
+	fadeHeaderPrev('.arrow-left', '[data-slide=collec-ver]');
 /*=================== swipe function 
 =======================*/
 

@@ -1,6 +1,4 @@
 header
-	
-
 .site-header
 	min-height: 100vh
 
@@ -61,7 +59,11 @@ header
 .arrow-right
 	transform: rotate(180deg)
 
-.arrow-up-right
+.arrow-up
+	cursor: pointer
+
+.arrow-up-right,
+.arrow-up
 	display: flex
 	width: 50px
 	height: 50px
@@ -81,6 +83,26 @@ header
 .arrow-up-right[data-action = 'click']
 	cursor: pointer
 
+.arrow-up-right.active
+	.icon-large
+		&:before
+			border-left: 3px solid $color-red
+			border-bottom: 3px solid $color-red
+		&:after
+			background: $bg-red
+		
+
+.arrow-up-right,
+.arrow-up
+	.icon-large
+		&:hover
+			&:before
+				border-left: 3px solid $color-red
+				border-bottom: 3px solid $color-red
+		&:hover
+			&:after
+				background: $bg-red
+				
 .image-title
 	font-family: "Neue_light"
 	font-size: 16px
@@ -106,25 +128,7 @@ header
 		font-size: 23px
 		line-height: 32px
 
-.arrow-up-right.active
-	.icon-large
-		&:before
-			border-left: 3px solid $color-red
-			border-bottom: 3px solid $color-red
-		&:after
-			background: $bg-red
-		
 
-.arrow-up-right
-	.icon-large
-		&:hover
-			&:before
-				border-left: 3px solid $color-red
-				border-bottom: 3px solid $color-red
-		&:hover
-			&:after
-				background: $bg-red
-				
 .icon-large
 	position: relative
 	display: flex
