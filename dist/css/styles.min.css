@@ -5200,6 +5200,7 @@ a {
  shoping-cart css styles
  @mixin ==================================*/
 .shopping-cart-wrapper {
+  z-index: 10;
   width: 30%;
   height: 100%;
   min-height: 100vh;
@@ -5929,6 +5930,7 @@ a {
 }
 
 .overlay-bg {
+  z-index: 2;
   display: none;
   position: fixed;
   background: rgba(0, 0, 0, 0.8);
