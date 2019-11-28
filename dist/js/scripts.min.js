@@ -5,6 +5,13 @@
 
 document.addEventListener("DOMContentLoaded", function() {
 
+	$('[data-hide=hideFooterMain]').parents('body').find('main').addClass('displ-none') //hide main-content on home page
+	$('[data-hide=hideFooterMain]').parents('body').find('footer').addClass('displ-none')//hide footer on home page
+	$('[data-action=click]').click(function(){
+		$(this).parents('body').find('main').toggleClass('displ-none'); //show main-content on home page
+		$(this).parents('body').find('footer').toggleClass('displ-none'); //show footer on home page
+	})
+
 	const player = new Plyr('#player'); //init player
 	 
 	
@@ -151,6 +158,5 @@ $(window).resize(function(){
 		var marg = $('[data-margin=propaganda]').offset().left - 20
 		$('#setOffset').offset({left: marg})
 	}
-	setMargin()
 	
 });

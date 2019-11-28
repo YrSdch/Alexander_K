@@ -4996,6 +4996,24 @@ a {
           align-items: center;
 }
 
+.navbar a {
+  padding: 20px 4px;
+  text-align: center;
+}
+
+.navbar a::before {
+  bottom: 20px;
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+}
+
+.navbar a:hover:before {
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+}
+
 .slide-menu {
   width: 20%;
   background: #111111;
@@ -5128,24 +5146,6 @@ a {
 
 .navbar__links-item a:hover:before,
 .slide-menu__section a:hover:before {
-  -webkit-transform: scale(1);
-      -ms-transform: scale(1);
-          transform: scale(1);
-}
-
-.navbar a {
-  padding: 20px 0;
-  text-align: center;
-}
-
-.navbar a::before {
-  bottom: 20px;
-  -webkit-transform: scale(0);
-      -ms-transform: scale(0);
-          transform: scale(0);
-}
-
-.navbar a:hover:before {
   -webkit-transform: scale(1);
       -ms-transform: scale(1);
           transform: scale(1);
@@ -5838,6 +5838,10 @@ a {
   display: flex;
 }
 
+.displ-none {
+  display: none;
+}
+
 .current.flex-col {
   display: -webkit-box;
   display: -webkit-flex;
@@ -6060,7 +6064,8 @@ a {
 }
 
 .stop-scroll {
-  height: 100vh;
+  height: 100%;
+  min-height: 100vh;
   overflow: hidden;
 }
 

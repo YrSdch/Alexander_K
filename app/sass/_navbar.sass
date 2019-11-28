@@ -13,6 +13,16 @@
 	flex-direction: column
 	align-items: center
 
+.navbar
+	a
+		padding: 20px 4px		
+		text-align: center
+		&::before
+			bottom: 20px
+			transform: scale(0)
+	a:hover:before
+		transform: scale(1)
+
 .slide-menu
 	width: 20%
 	background: $bg-black
@@ -87,15 +97,7 @@
 	a:hover:before
 		transform: scale(1)
 
-.navbar
-	a
-		padding: 20px 0		
-		text-align: center
-		&::before
-			bottom: 20px
-			transform: scale(0)
-	a:hover:before
-		transform: scale(1)
+
 
 .slide-menu__section
 	a
