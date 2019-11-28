@@ -5,7 +5,7 @@
 
 document.addEventListener("DOMContentLoaded", function() {
 
-	const player = new Plyr('#player');
+	const player = new Plyr('#player'); //init player
 	 
 	
 	/*===================slide menu functions=======================*/
@@ -30,11 +30,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		$('.overlay-bg').removeClass('active')
 		$('.shopping-cart-wrapper').removeClass('active')
 		$('body').removeClass('stop-scroll')
-
 	})
-
-	
-
 /*===================slide menu functions=======================*/
 	
 
@@ -76,16 +72,22 @@ collection versions in header(homepage) functions
 =======================*/
 /*=================== rotate arrow 
 =======================*/
+	$('h1').click(function(){
+		console.log(';')
+	})
+ 
+
+$('h1').click(function(){
+		console.log(';')
+	})
 	$('.arrow-up-right').click(function(){
 		$(this).toggleClass('active');
 		$('.version-wrapp').toggleClass('hidden');
 		$(this).parent('.header__lower-signature').find('span').toggleClass('hidden');
 	})
-
-	
-
 /*=================== rotate arrow 
 =======================*/
+
 
 /*=================== swipe function
 =======================*/
