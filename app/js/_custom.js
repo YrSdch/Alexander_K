@@ -138,7 +138,14 @@ collection versions in header(homepage) functions
       }
 		 },
 		});
-	$(window).resize(function(){
+
+	const player = new Plyr('#player');
+
+	
+/*=================== swipe function 
+=======================*/
+
+$(window).resize(function(){
 		setMargin()
 	})
 	function setMargin(){
@@ -146,7 +153,5 @@ collection versions in header(homepage) functions
 		$('#setOffset').offset({left: marg})
 	}
 	setMargin()
-/*=================== swipe function 
-=======================*/
 	
 });

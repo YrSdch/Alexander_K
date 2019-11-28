@@ -5653,6 +5653,15 @@ a {
   border: 1px solid #CF4C4C;
 }
 
+.videocontainer {
+  width: 100%;
+  height: auto;
+}
+
+.videocontainer video {
+  width: 100%;
+}
+
 /*!=================================
  about styles
  @mixin ==================================*/

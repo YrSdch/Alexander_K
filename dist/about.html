@@ -8,6 +8,7 @@
 	<title>Alexander</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="description" content="">
+  <link rel="stylesheet" href="css/plyr.css">
 	<link rel="stylesheet" href="css/styles.min.css">
 
 </head>
@@ -136,7 +137,13 @@
     				<img src="img/alex.png">
     			</div>
     			<div class="right-col-img">
-    				<img src="img/about-1.png">
+    				<div class="videocontainer">
+    					<video poster='img/about-1.png' id='player' playsinline controls>
+    						 <source src='img/Landscape - 757.mp4' type='video/mp4'>
+    						 <!-- <source src='/path/to/video.webm' type='video/webm'>						  -->
+    					</video>
+    				</div>
+    				
     			</div>
     			<div class="right-col-img ">
     				<img src="img/about-2.png">
@@ -612,6 +619,8 @@
   </symbol>
 </svg>
 <script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+<script src="js/plyr.min.js"></script>
+<script src="js/plyr.polyfilled.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.js"></script>
 <script src="js/scripts.min.js"></script>
 
