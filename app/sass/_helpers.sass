@@ -61,6 +61,9 @@
 .mb40
 	margin-bottom: 40px
 
+.mb85
+	margin-bottom: 85px
+
 .mb120
 	margin-bottom: 120px
 
@@ -99,13 +102,31 @@
 
 .bord-b-white
 	border-bottom: 1px solid #fff
-
+.secondary-header 
+	&.bord-b-white
+		position: relative
+		&:before,
+		&:after
+			content: ''
+			position: absolute
+			bottom: -1px
+			display: block
+			height: 1px
+			background: $bg-white
+		&:before
+			width: 40px
+			left: -40px
+		&:after
+			width: 60px
+			bottom: -1px
+			right: -60px
 .bord-b-black
 	border-bottom: 1px solid #000
 
 .bord-l-white
 	border-left: 1px solid #FFF
-
+.brder-l-md
+		border-left: 1px solid $color-white
 .border-l-r-white
 	border-left: 1px solid #FFF
 	border-right: 1px solid #FFF
@@ -165,6 +186,9 @@
 
 .text-upper
 	text-transform: uppercase
+
+.text-capit
+	text-transform: capitalize
 
 .tablet-visible
 	display: none

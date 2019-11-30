@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		$(this).parents('body').find('footer').toggleClass('displ-none'); //show footer on home page
 	})
 
+
 	const player = new Plyr('#player'); //init player
 	 
 	
@@ -83,7 +84,6 @@ collection versions in header(homepage) functions
 		
 	})
 
-	
 	$('.arrow-up-right').click(function(){
 		$(this).toggleClass('active');
 		$('.version-wrapp').toggleClass('hidden');
@@ -135,7 +135,13 @@ collection versions in header(homepage) functions
 		 },
 		});
 
+	/*=================== grid system for shap art page
+=======================*/
 
+	
+
+/*=================== grid system for shap art page
+=======================*/
 	slideMenu('.hamburger', '.slide-menu', '.overlay');
 	slideMenu('.icon-shop', '.shopping-cart-wrapper', '.overlay-bg');
 	hideMenuBg('.overlay-bg', '.shopping-cart-wrapper')
