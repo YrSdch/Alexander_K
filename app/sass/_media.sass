@@ -11,6 +11,22 @@
 		padding-left: 40px
 
 @media screen and (max-width: 992px)
+	.galery
+		border-right: none
+		&:before,
+		&:after
+			bottom: 0px
+		&:after
+			right: calc(50% - 1px)
+		&:before
+			display: none
+	.galery__item
+		width: 50%
+
+	.art-wrapper
+		padding-left: 20px
+		padding-right: 20px
+
 	.brder-l-md
 		border: none
 	.moon-white-wrap
@@ -110,6 +126,12 @@
 		&:nth-child(1),
 		&:nth-child(2)
 			border-bottom: 1px solid $color-white
+
+	.separate-photo
+		display: none
+
+	.text-multi-col
+		max-width: 100%
 	
 @media screen and (max-width: 768px)
 	.moon-white-wrap
@@ -118,7 +140,7 @@
 	.galery__col
 		border: none
 
-
+	
 	.art-wrapper
 		padding-left: 15px
 		padding-right: 15px
@@ -271,9 +293,11 @@
 		// 	right: 0
 		// 	background: linear-gradient(to right, transparent, $color-black)
 
-	.separate-photo
-		display: none
-	.text-multi-col
+	.galery
+		&:after
+			display: none
+		&:before
+			display: none
+	.galery__item
 		width: 100%
-		max-width: 100%
 

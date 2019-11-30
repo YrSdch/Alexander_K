@@ -81,13 +81,15 @@ collection versions in header(homepage) functions
 /*=================== rotate arrow 
 =======================*/
 	$('.arrow-up-right[data-action=click]').click(function(){
-		
-	})
-
-	$('.arrow-up-right').click(function(){
 		$(this).toggleClass('active');
 		$('.version-wrapp').toggleClass('hidden');
 		$(this).parent('.header__lower-signature').find('span').toggleClass('hidden');
+		console.log($(window).width())
+		if($(window).width()<991){
+			$(this).parents('header').find('.tablet-aligm').addClass('displ-none')
+		}else {
+			$(this).parents('header').find('.tablet-aligm').removeClass('displ-none')
+		}
 	})
 /*=================== rotate arrow 
 =======================*/
@@ -138,9 +140,20 @@ collection versions in header(homepage) functions
 	/*=================== grid system for shap art page
 =======================*/
 
-	
+	$('.galery').imagesLoaded( function() {
+	  $('#galery__container').masonry({
+		  itemSelector: '.galery__item',
+		  columnWidth: '.galery__item',
+		  // horizontalOrder: true,
+		  transitionDuration: 0,
+
+		});
+	});
 
 /*=================== grid system for shap art page
+=======================*/
+
+/*=================== call the function
 =======================*/
 	slideMenu('.hamburger', '.slide-menu', '.overlay');
 	slideMenu('.icon-shop', '.shopping-cart-wrapper', '.overlay-bg');
@@ -156,7 +169,7 @@ collection versions in header(homepage) functions
 	fadeHeaderPrev('.arrow-left', '[data-slide=collec-ver]');
 /*=================== swipe function 
 =======================*/
-
+// function to fix some responsive problem
 $(window).resize(function(){
 		setMargin()
 	})
