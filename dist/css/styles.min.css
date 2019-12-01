@@ -5504,7 +5504,6 @@ a {
 }
 
 .text-section {
-  width: 100%;
   max-width: 480px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -5521,6 +5520,14 @@ a {
           align-items: flex-start;
   margin-left: auto;
   margin-right: 0;
+}
+
+.text-section div {
+  width: 100%;
+}
+
+.text-section p {
+  width: 100%;
 }
 
 .signature {
@@ -6072,6 +6079,10 @@ a {
 
 .p20 {
   padding: 20px;
+}
+
+.pt80 {
+  padding-top: 80px;
 }
 
 .pos-relative {
