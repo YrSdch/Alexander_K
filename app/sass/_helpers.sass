@@ -26,6 +26,19 @@
 	opacity: 0
 	transition: 0.2s
 
+.a_hover
+	position: relative
+	&::before
+		position: absolute
+		content: ''
+		display: block
+		width: 100%
+		border: 1px dashed #F2F2F2
+		bottom: -5px 
+		transform: scale(0)
+		transition: 0.2s
+	&:hover:before
+		transform: scale(1)
 .w100
 	width: 100%
 
@@ -49,6 +62,9 @@
 	height: 100%
 	min-height: 100vh
 
+.mb10
+	margin-bottom: 10px
+
 .mb15
 	margin-bottom: 15px
 
@@ -66,6 +82,9 @@
 
 .mb120
 	margin-bottom: 120px
+
+.ml10
+	margin-left: 10px
 
 .ml20
 	margin-left: 20px
@@ -109,22 +128,26 @@
 		&:after
 			content: ''
 			position: absolute
-			bottom: -1px
+			bottom: -2px
 			display: block
-			height: 1px
+			height: 2px
 			background: $bg-white
 		&:before
 			width: 40px
 			left: -40px
 		&:after
 			width: 60px
-			bottom: -1px
+			bottom: -2px
 			right: -60px
 .bord-b-black
 	border-bottom: 1px solid #000
 
 .bord-l-white
 	border-left: 1px solid #FFF
+
+.bord-r-white
+	border-right: 1px solid #FFF
+
 .brder-l-md
 		border-left: 1px solid $color-white
 .border-l-r-white
@@ -174,6 +197,12 @@
 
 .text-white
 	color: $text-white
+
+.text-gray
+	color: $text-gray
+
+.text-light-gray
+	color: $text-light-gray
 
 .text-left
 	text-align: left!important

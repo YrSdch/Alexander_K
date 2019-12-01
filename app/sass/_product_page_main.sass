@@ -1,0 +1,72 @@
+.descritpion-overflov
+	max-height: 200px
+	overflow-y: auto
+
+.prod-size
+	display: flex
+	justify-content: space-between
+.prod-size-label
+	p
+		border: 1px solid transparent
+		border-bottom: 1px solid #F2F2F2
+		display: flex
+		cursor: pointer
+		padding: 5px
+		&:hover
+			border: 1px solid #F2F2F2
+	input
+		display: none
+		&:checked
+			&+p
+				border: 1px solid #F2F2F2
+
+.prod-preview
+	position: relative
+	img
+		display: block
+		width: 100%
+		height: 100%
+		object-fit: cover
+
+.preview__bottom
+	display: flex
+	justify-content: space-around
+	position: absolute
+	bottom: 0
+	width: 100%
+	background: rgba(0, 0, 0, 0.7)
+	a
+		text-align: center
+		padding: 15px 15px
+	.icon
+		width: 15px
+		height: 15px
+.prod-border
+	border-top: 1px solid #fff
+	position: relative
+	margin-left: -40px
+	margin-right: 0px
+	
+	&:after
+		content: ''
+		position: absolute
+		top: -1px
+		display: block
+		height: 1px
+		background: #fff
+		width: 60px
+		right: -60px
+	
+.prod-item
+	padding: 40px 20px
+	display: flex
+	flex-direction: column
+	align-items: flex-start
+	img
+		width: 100%
+		max-width: 100%
+		max-height: 500px
+		object-fit: cover
+
+
+

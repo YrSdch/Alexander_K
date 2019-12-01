@@ -33,8 +33,8 @@
 		border-left: none
 		border-top: 1px solid $color-white
 		padding: 20px
-		margin-left: -75px
-		margin-right: -75px
+		margin-left: -15px
+		margin-right: -15px
 	.moon-white
 		margin-bottom: 20px
 	.pl-lg-40
@@ -64,6 +64,13 @@
 		img
 			height: auto
 			max-width:	475px
+	.footer__item
+		&:nth-child(3)
+			&:after
+				display: none
+
+	.secondary-header.bord-b-white:after
+		display: none
 
 	.tablet-aligm
 		display: flex
@@ -118,9 +125,9 @@
 				text-align: center
 
 	.footer__item
-	&:nth-child(3)
-		&:after
-			content:
+		&:nth-child(3)
+			&:after
+				content:
 
 	.footer__bottom
 		&:nth-child(1),
@@ -132,6 +139,13 @@
 
 	.text-multi-col
 		max-width: 100%
+
+	.prod-border
+		&:before
+			left: -5px
+			width: 5px
+		&:after
+			display: none
 	
 @media screen and (max-width: 768px)
 	.moon-white-wrap
@@ -250,7 +264,9 @@
 	.work-areas
 		padding-left: 20px
 		padding-right: 20px
-
+	.prod-border
+		margin-left: -15px
+		margin-right: -15px
 @media screen and (max-width: 576px)
 	.moon-white-wrap
 		padding: 20px
