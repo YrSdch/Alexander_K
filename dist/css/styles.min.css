@@ -4667,6 +4667,7 @@ body {
           flex-direction: column;
   overflow-x: hidden;
   position: relative;
+  background: #111111;
 }
 
 button {
@@ -4733,6 +4734,10 @@ a {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.header__top img {
+  min-width: 140px;
 }
 
 .version-wrapp {
@@ -4996,6 +5001,10 @@ a {
           align-items: center;
 }
 
+.navbar {
+  z-index: 1;
+}
+
 .navbar a {
   padding: 20px 4px;
   text-align: center;
@@ -5053,6 +5062,7 @@ a {
 }
 
 .hamburger {
+  position: absolute;
   width: 20px;
   height: 17px;
   cursor: pointer;
@@ -5197,6 +5207,7 @@ a {
  @mixin ==================================*/
 .icon-shop {
   position: fixed;
+  z-index: 2;
   top: 15px;
   right: 20px;
   cursor: pointer;
@@ -5925,6 +5936,22 @@ a {
   min-height: 100vh;
 }
 
+.min-h80 {
+  min-height: 80vh;
+}
+
+.min-h60 {
+  min-height: 60vh;
+}
+
+.main-logo {
+  min-width: 150px;
+}
+
+.min-h30 {
+  min-height: 30vh !important;
+}
+
 .mb10 {
   margin-bottom: 10px;
 }
@@ -5999,6 +6026,10 @@ a {
   background: #CF4C4C;
 }
 
+.bord-gray {
+  border: 1px solid #B6B6B6;
+}
+
 .bord-b-white {
   border-bottom: 1px solid #fff;
 }
@@ -6010,9 +6041,9 @@ a {
 .secondary-header.bord-b-white:before, .secondary-header.bord-b-white:after {
   content: '';
   position: absolute;
-  bottom: -2px;
+  bottom: -1px;
   display: block;
-  height: 2px;
+  height: 1px;
   background: #ffffff;
 }
 
@@ -6023,7 +6054,7 @@ a {
 
 .secondary-header.bord-b-white:after {
   width: 60px;
-  bottom: -2px;
+  bottom: -1px;
   right: -60px;
 }
 
@@ -6046,6 +6077,28 @@ a {
 .border-l-r-white {
   border-left: 1px solid #FFF;
   border-right: 1px solid #FFF;
+}
+
+.bord-befo-after {
+  position: relative;
+}
+
+.bord-befo-after:after, .bord-befo-after:before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 15px;
+  height: 1px;
+  bottom: -1px;
+  background: #ffffff;
+}
+
+.bord-befo-after:after {
+  left: -15px;
+}
+
+.bord-befo-after:before {
+  right: -15px;
 }
 
 .overlay-bg {
@@ -6071,6 +6124,10 @@ a {
 .plr60 {
   padding-left: 100px;
   padding-right: 60px;
+}
+
+.pl75 {
+  padding-left: 75px;
 }
 
 .pl20pt15 {
@@ -6151,6 +6208,10 @@ a {
 
 .icon svg {
   stroke: #fff;
+}
+
+.inp-spacer {
+  padding: 17px 10px 17px 20px;
 }
 
 .rotate90 {
@@ -6446,6 +6507,7 @@ a {
   display: block;
   width: 100%;
   height: 100%;
+  max-height: 710px;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -6521,6 +6583,187 @@ a {
  product_page classes styles
  @mixin ==================================*/
 /*!=================================
+ contact_page_main_content classes styles
+ @mixin ==================================*/
+.contact__form {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.contact__form .check-valid {
+  position: relative;
+}
+
+.contact__form .check-valid.valid {
+  border-color: #ffffff;
+}
+
+.contact__form .check-valid.valid:after, .contact__form .check-valid.not-valid:after {
+  content: "";
+  width: 15px;
+  height: 10px;
+  display: block;
+  position: absolute;
+  top: 50%;
+  border-radius: 2px;
+}
+
+.contact__form .check-valid.valid:after {
+  border-bottom: 2px solid #ffffff;
+  border-left: 2px solid #ffffff;
+  right: 20px;
+  -webkit-transform: translateY(-50%) rotate(-45deg);
+      -ms-transform: translateY(-50%) rotate(-45deg);
+          transform: translateY(-50%) rotate(-45deg);
+}
+
+.contact__form .check-valid.not-valid:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+}
+
+.contact__form .check-valid.not-valid:after, .contact__form .check-valid.not-valid:before {
+  width: 15px;
+  border-radius: 2px;
+  height: 2px;
+  background: #B6B6B6;
+  right: 20px;
+  -webkit-transform-origin: 54% 26%;
+      -ms-transform-origin: 54% 26%;
+          transform-origin: 54% 26%;
+}
+
+.contact__form .check-valid.not-valid:before {
+  -webkit-transform: rotate(-45deg) translateY(-50%);
+      -ms-transform: rotate(-45deg) translateY(-50%);
+          transform: rotate(-45deg) translateY(-50%);
+}
+
+.contact__form .check-valid.not-valid:after {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.contact__form .label-width {
+  width: calc(100% - 25px);
+}
+
+.contact__form textarea {
+  min-height: 115px;
+  resize: none;
+}
+
+.contact-img {
+  position: relative;
+  z-index: 1;
+  margin-left: -25px;
+  width: calc(100% - 33.33333% + 25px);
+}
+
+.contact-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.attach-field {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  cursor: pointer;
+}
+
+.attach-field input {
+  display: none;
+}
+
+.attach-field .icon {
+  width: 11px;
+}
+
+.cont-subm {
+  padding: 11px 25px;
+  width: 100%;
+}
+
+.cont-subm:hover {
+  background: #CF4C4C;
+  border: 1px solid transparent;
+}
+
+/*!=================================
+ contact_page_main_content classes styles
+ @mixin ==================================*/
+/*!=================================
+ privacy_page classes styles
+ @mixin ==================================*/
+.privacy-list {
+  padding: 30px 40px;
+  border-right: 1px solid #ffffff;
+}
+
+.privacy-list ul {
+  list-style: none;
+}
+
+.privacy-list ul li span {
+  cursor: pointer;
+  padding: 10px 0;
+  display: inline-block;
+}
+
+.privacy-list ul li span:hover, .privacy-list ul li span.active {
+  color: #B6B6B6;
+}
+
+.privacy-text {
+  padding: 40px;
+  border-right: 1px solid #ffffff;
+}
+
+.privacy-text p[data-name] {
+  display: none;
+}
+
+.privacy-text p[data-name].active {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/*!=================================
+ privacy_page  classes styles
+ privacy_page */
+/*!=================================
  media-queries css styles
  @mixin ==================================*/
 @media screen and (max-width: 1240px) {
@@ -6558,6 +6801,9 @@ a {
   .art-wrapper {
     padding-left: 20px;
     padding-right: 20px;
+  }
+  .pl75 {
+    padding-left: 20px;
   }
   .brder-l-md {
     border: none;
@@ -6644,6 +6890,9 @@ a {
   .shopping-cart-wrapper {
     width: 50%;
   }
+  .site-header .header__top {
+    padding-left: 40px;
+  }
   .about-page .site-header {
     min-height: auto;
   }
@@ -6698,9 +6947,36 @@ a {
   .prod-border:after {
     display: none;
   }
+  .contact-img {
+    position: relative;
+    z-index: 1;
+    margin-left: -25px;
+    width: calc(100% - 50% + 25px);
+  }
+  .min-h80 {
+    min-height: auto;
+  }
+  .privacy-text {
+    padding: 15px;
+    border-right: none;
+  }
 }
 
 @media screen and (max-width: 768px) {
+  .privacy-list {
+    border-right: none;
+    padding: 15px 15px 45px 15px;
+  }
+  .privacy-list:after {
+    content: '';
+    display: block;
+    width: 15px;
+    height: 1px;
+    position: absolute;
+    top: -1px;
+    right: 0;
+    background: #ffffff;
+  }
   .moon-white-wrap {
     margin-left: -15px;
     margin-right: -15px;
@@ -6801,6 +7077,9 @@ a {
     padding-left: 60px;
     padding-right: 60px;
   }
+  .site-header .header__top {
+    margin: auto;
+  }
   .header__top {
     margin: auto auto 65px auto;
     -webkit-box-pack: center;
@@ -6885,6 +7164,9 @@ a {
   .art-wrapper {
     padding-left: 15px;
     padding-right: 15px;
+  }
+  .pl75 {
+    padding-left: 15px;
   }
   .w600 {
     width: 600px;

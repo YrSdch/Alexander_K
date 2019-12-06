@@ -1,0 +1,83 @@
+.contact__form
+	display: flex
+	flex-direction: column
+	align-items: flex-start
+	padding: 40px
+	display: flex
+	flex-direction: column
+	align-items: flex-start
+	.check-valid
+		position: relative
+		&.valid
+			border-color: $color-white
+		&.valid,
+		&.not-valid
+			&:after
+				content: ""
+				width: 15px
+				height: 10px
+				display: block
+				position: absolute
+				top: 50%
+				border-radius: 2px
+
+		&.valid
+			&:after
+				border-bottom: 2px solid $color-white
+				border-left: 2px solid $color-white
+				right: 20px
+				transform: translateY(-50%) rotate(-45deg)
+		&.not-valid
+			&:before
+				content: ''
+				display: block
+				position: absolute
+				top: 50%
+			&:after,
+			&:before
+				width: 15px
+				border-radius: 2px
+				height: 2px
+				background: $color-gray
+				right: 20px
+				transform-origin: 54% 26%
+			&:before
+				transform: rotate(-45deg) translateY(-50%)
+			&:after
+				transform: rotate(45deg)
+
+	.label-width
+		width: calc(100% - 25px)
+	textarea
+		min-height: 115px
+		resize: none
+
+
+.contact-img
+	position: relative
+	z-index: 1
+	margin-left: -25px
+	width: calc(100% - 33.33333% + 25px)
+	img
+		width: 100%
+		height: 100%
+		object-fit: cover
+
+.attach-field
+	display: flex
+	align-items: center
+	justify-content: flex-end
+	cursor: pointer
+	input
+		display: none
+	.icon
+		width: 11px
+		height 17px
+
+.cont-subm
+	padding: 11px 25px
+	width: 100%
+	&:hover
+		background: $bg-red
+		border: 1px solid transparent
+	

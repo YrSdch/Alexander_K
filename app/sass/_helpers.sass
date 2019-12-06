@@ -62,6 +62,17 @@
 	height: 100%
 	min-height: 100vh
 
+.min-h80
+	min-height: 80vh
+
+.min-h60
+	min-height: 60vh
+
+.main-logo
+	min-width: 150px
+.min-h30
+	min-height: 30vh!important
+
 .mb10
 	margin-bottom: 10px
 
@@ -119,6 +130,8 @@
 .bg-red
 	background: $bg-red
 
+.bord-gray
+	border: 1px solid $color-gray
 .bord-b-white
 	border-bottom: 1px solid #fff
 .secondary-header 
@@ -128,16 +141,16 @@
 		&:after
 			content: ''
 			position: absolute
-			bottom: -2px
+			bottom: -1px
 			display: block
-			height: 2px
+			height: 1px
 			background: $bg-white
 		&:before
 			width: 40px
 			left: -40px
 		&:after
 			width: 60px
-			bottom: -2px
+			bottom: -1px
 			right: -60px
 .bord-b-black
 	border-bottom: 1px solid #000
@@ -154,7 +167,22 @@
 	border-left: 1px solid #FFF
 	border-right: 1px solid #FFF
 
-
+.bord-befo-after
+	position: relative
+	&:after,
+	&:before
+		content: ''
+		position: absolute
+		display: block
+		width: 15px
+		height: 1px
+		bottom: -1px
+		
+		background: $bg-white
+	&:after
+		left: -15px
+	&:before
+		right: -15px
 .overlay-bg
 	z-index: 2
 	display: none
@@ -177,7 +205,8 @@
 .plr60
 	padding-left: 100px
 	padding-right: 60px
-
+.pl75
+	padding-left: 75px
 .pl20pt15
 	padding: 15px 20px
 .p20
@@ -230,7 +259,8 @@
   height: 25px
 		svg
 			stroke: #fff
-
+.inp-spacer
+	padding: 17px 10px 17px 20px
 .rotate90
 	transform: rotate(90deg)
 

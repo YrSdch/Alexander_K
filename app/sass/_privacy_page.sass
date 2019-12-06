@@ -1,0 +1,24 @@
+.privacy-list
+	padding: 30px 40px
+	border-right: 1px solid $color-white
+	ul
+		list-style: none
+		li
+			span
+				cursor: pointer
+				padding: 10px 0
+				display: inline-block
+				&:hover,
+				&.active
+					color: $text-gray
+
+.privacy-text
+	padding: 40px
+	border-right: 1px solid $color-white
+	p
+		&[data-name]
+			display: none
+			&.active
+				display: flex
+
+

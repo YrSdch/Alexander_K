@@ -27,7 +27,8 @@
 	.art-wrapper
 		padding-left: 20px
 		padding-right: 20px
-
+	.pl75
+		padding-left: 20px
 	.brder-l-md
 		border: none
 	.moon-white-wrap
@@ -96,6 +97,10 @@
 	.shopping-cart-wrapper
 		width: 50%
 
+	.site-header 
+		.header__top
+			padding-left: 40px
+
 	.about-page
 		.site-header
 			min-height: auto
@@ -147,8 +152,33 @@
 			width: 5px
 		&:after
 			display: none
-	
+
+	.contact-img
+		position: relative
+		z-index: 1
+		margin-left: -25px
+		width: calc(100% - 50% + 25px)
+	.min-h80
+		min-height: auto
+
+	.privacy-text
+		padding: 15px
+		border-right: none
+		
 @media screen and (max-width: 768px)
+
+	.privacy-list
+		border-right: none
+		padding: 15px 15px 45px 15px
+		&:after
+			content: ''
+			display: block
+			width: 15px
+			height: 1px
+			position: absolute
+			top: -1px
+			right: 0
+			background: $bg-white
 
 	.moon-white-wrap
 		margin-left: -15px
@@ -222,7 +252,9 @@
 	.plr-responsive60
 		padding-left: 60px
 		padding-right: 60px
-
+	.site-header
+		.header__top
+			margin: auto
 	.header__top
 		margin: auto auto 65px auto
 		justify-content: center
@@ -277,6 +309,8 @@
 	.art-wrapper
 		padding-left: 15px
 		padding-right: 15px
+	.pl75
+		padding-left: 15px
 	.w600
 		width: 600px
 	.header__bottom
