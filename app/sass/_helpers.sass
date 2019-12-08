@@ -17,6 +17,8 @@
 .displ-none
 	display: none!important
 
+
+
 .current.flex-col
 	display: flex
 	flex-direction: column
@@ -61,6 +63,10 @@
 .min-h100vh
 	height: 100%
 	min-height: 100vh
+
+.min-h90
+	min-height: 90vh
+
 
 .min-h80
 	min-height: 80vh
@@ -127,6 +133,12 @@
 .bg-black
 	background: $bg-black
 
+.bright-nav
+	.bg-black
+		background: $bg-bright
+.bg-bright
+	background: $bg-bright
+
 .bg-red
 	background: $bg-red
 
@@ -134,6 +146,11 @@
 	border: 1px solid $color-gray
 .bord-b-white
 	border-bottom: 1px solid #fff
+
+.bright-nav
+	.bord-b-white
+		border-bottom: 1px solid $bg-black
+
 .secondary-header 
 	&.bord-b-white
 		position: relative
@@ -152,11 +169,24 @@
 			width: 60px
 			bottom: -1px
 			right: -60px
+
+.bright-nav
+	& .secondary-header 
+		&.bord-b-white
+			&:before,
+			&:after
+				background: $bg-black
+
+
 .bord-b-black
 	border-bottom: 1px solid #000
 
 .bord-l-white
 	border-left: 1px solid #FFF
+
+.bright-nav
+	.bord-l-white
+		border-left: 1px solid $bg-black
 
 .bord-r-white
 	border-right: 1px solid #FFF
@@ -166,6 +196,11 @@
 .border-l-r-white
 	border-left: 1px solid #FFF
 	border-right: 1px solid #FFF
+
+.bright-nav	
+	.border-l-r-white
+		border-left: 1px solid $color-black
+		border-right: 1px solid $color-black
 
 .bord-befo-after
 	position: relative
@@ -177,12 +212,12 @@
 		width: 15px
 		height: 1px
 		bottom: -1px
-		
 		background: $bg-white
 	&:after
 		left: -15px
 	&:before
 		right: -15px
+
 .overlay-bg
 	z-index: 2
 	display: none
@@ -196,6 +231,9 @@
 	&.active
 		display: block
 
+.bright-nav
+	.overlay-bg
+		background: rgba(219, 216, 218, 0.8)
 
 
 .pl50
@@ -229,11 +267,23 @@
 .text-white
 	color: $text-white
 
+.bright-nav
+	.text-white
+		color: $text-black
+
 .text-gray
 	color: $text-gray
+.bg-bright
+	.text-gray 
+		color: #424242
+.text-brown
+	color: #424242
 
 .text-light-gray
 	color: $text-light-gray
+
+.text-black
+	color: $text-black
 
 .text-left
 	text-align: left!important
@@ -278,4 +328,7 @@
 
 .fxd-c
 	flex-direction: column
+
+.font-normal
+	font-weight: normal
 

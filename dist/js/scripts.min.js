@@ -14,6 +14,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 	const player = new Plyr('#player'); //init player
+	const player2 = new Plyr('#mediaPlayer'); //init player
+
 	 
 	
 	/*===================slide menu functions=======================*/
@@ -84,7 +86,6 @@ collection versions in header(homepage) functions
 		$(this).toggleClass('active');
 		$('.version-wrapp').toggleClass('hidden');
 		$(this).parent('.header__lower-signature').find('span').toggleClass('hidden');
-		console.log($(window).width())
 		if($(window).width()<991){
 			$(this).parents('header').find('.tablet-aligm').toggleClass('displ-none');
 			$(this).parents('header').find('.responsive-height').toggleClass('min-h30')
@@ -170,10 +171,6 @@ collection versions in header(homepage) functions
 		})
 	})
 
-	
-
-
-	
 
 /*=================== form validation
 =======================*/
@@ -197,6 +194,36 @@ $('.phone-mask').keydown(function(){
     })
 /*=================== like tabs on privacy page
 =======================*/
+/*=================== cut long text
+=======================*/
+$("[data-action=cut_blog_text]").text(function(i, text) {
+  if (text.length >= 155) {
+    text = text.substring(0, 155);
+    var lastIndex = text.lastIndexOf(" ");       // позиция последнего пробела
+    text = text.substring(0, lastIndex) + '...'; // обрезаем до последнего слова
+  }
+  $(this).text(text);
+});
+
+/*=================== cut long text
+=======================*/
+/*=================== change fill-prop of icon 
+=======================*/ 
+ function changeFill(){
+ 	var mark = document.querySelector('.bright-nav')
+ 		if (mark) {
+ 			document.getElementById('cart_path1').setAttribute('stroke','#000')
+ 			document.getElementById('cart_path2').setAttribute('stroke','#000')
+ 			document.getElementById('cart_path3').setAttribute('fill','#000')
+ 			document.getElementById('cart_path4').setAttribute('stroke','#000')
+ 			document.getElementById('cart_path5').setAttribute('stroke','#000')
+ 		} else return
+ }
+
+
+
+/*=================== change fill-prop of icon 
+=======================*/
 /*=================== call the function
 =======================*/
 	slideMenu('.hamburger', '.slide-menu', '.overlay');
@@ -211,6 +238,8 @@ $('.phone-mask').keydown(function(){
 	fadeHeaderPrev('.arrow-left', '[data-slide=collec-img]');
 	fadeHeaderPrev('.arrow-left', '[data-slide=collec-title]');
 	fadeHeaderPrev('.arrow-left', '[data-slide=collec-ver]');
+
+	changeFill()
 /*=================== swipe function 
 =======================*/
 // function to fix some responsive problem

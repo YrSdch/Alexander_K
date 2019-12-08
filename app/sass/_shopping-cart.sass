@@ -14,12 +14,18 @@
 	justify-content: flex-start
 	transform: translateX(101%)
 	transition: 0.3s
-
 	&.active
 		transform: translateX(0)
 		transition: 0.3s
 
+.bright-nav
+	.shopping-cart-wrapper
+		border-left: 1px solid $color-black
 
+
+.bright-nav
+	.shopping-cart-wrapper
+		background: $bg-bright
 
 .sopping__top
 	display: flex
@@ -34,9 +40,19 @@
 	line-height: 21px
 	color: $text-gray
 
+.bright-nav
+	.shopping__title
+		color: $text-black
+
 .product-row
 	display: flex
 	border-bottom: 1px solid #fff
+
+.bright-nav
+	.product-row,
+	.sopping__top
+		border-bottom: 1px solid $bg-black
+
 
 .shopping__row
 	display: flex
@@ -55,6 +71,9 @@
 	line-height: 18px
 	position: absolute
 
+.bright-nav
+	.product-total
+		color: $text-white
 .product__img
 	padding: 20px
 	width: 30%
@@ -105,6 +124,12 @@
 		transform: rotate(-45deg)
 		transform-origin: center
 
+.bright-nav
+	.product__remove
+		&:after,
+		&:before
+			background: $bg-black
+
 .shopping__row
 	display: flex
 	align-items: center
@@ -130,6 +155,10 @@
 	margin-top: auto
 	margin-bottom: 0
 	border-top: 1px solid #fff
+
+.bright-nav
+	.shopping__bottom
+		border-top: 1px solid $bg-black
 
 .checkout
 	position: relative
@@ -160,7 +189,10 @@
 		&:after
 			width: calc(100% - 120px)
 
-
+.bright-nav
+	.checkout
+		&.text-white
+			color: $text-white
 
 	
 

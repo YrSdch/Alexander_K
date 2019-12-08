@@ -24,6 +24,20 @@
 			background: $bg-white
 			right: -60px
 			top: -1px
+
+.bright-nav
+	.footer__item
+		border-top: 1px solid $color-black
+		border-bottom: 1px solid $color-black
+		&:nth-child(2)
+			border-left: 1px solid $color-black
+			border-right: 1px solid $color-black
+		&:nth-child(3)
+			border-right: 1px solid $color-black
+			&:after
+				background: $bg-black
+
+
 .footer__bottom
 	display: flex
 	align-items: center
@@ -51,6 +65,12 @@
 	a:hover:before
 		width: 100%
 
+.bright-nav
+	.footer__bottom-item
+		a
+			&::before
+				border-color: $color-black
+
 .black-input
 	position: relative
 	display: flex
@@ -63,6 +83,14 @@
 	outline: none
 	border: none
 	border-bottom: 1px solid $color-white
+
+.bright-nav
+	.black-field
+		background: $bg-bright
+		border-bottom: 1px solid $color-black
+	.black-input
+		input
+			color: $text-black
 
 .transparent-btn
 	position: absolute

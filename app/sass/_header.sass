@@ -4,7 +4,7 @@ header
 
 
 .header__content
-	padding-top: 22px
+	padding-top: 25px
 	padding-bottom: 23px
 	display: flex
 	flex-direction: column
@@ -131,7 +131,8 @@ header
 		line-height: 32px
 
 
-.icon-large
+.icon-large,
+.blog-arrow
 	position: relative
 	display: flex
 	justify-content: center
@@ -143,23 +144,39 @@ header
 		right: 20px
 		display: block
 		top: 50%
-
 	&:before
 		width: 26px
 		height: 26px
-		border-left: 3px solid #fff
-		border-bottom: 3px solid #fff
 		transform: translate(0, -50%) rotate(225deg)
-
 	&:after
 		width: 35px
 		height: 3px
-		background: #fff
-		transform: translate(0, -50%)
+		transform: translate(2px, -2px)
 		transition: 0.3s 
 
+.icon-large
+	&:before
+		border-left: 3px solid #fff
+		border-bottom: 3px solid #fff
+	&:after
+		background: #fff
+
+.blog-arrow
+	transform: rotate(-45deg)
+	width: 35px
+	height: 35px
+	&:before
+		border-left: 3px solid #000
+		border-bottom: 3px solid #000
+	&:after
+		background: #000
+.flex-col
+	display: flex
+	flex-direction: column
 [data-slide]
 	display: none
-
+[data-hide]
+	.header__content
+		padding-top: 23px
 .current[data-slide]
 	display: flex!important

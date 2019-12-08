@@ -22,6 +22,14 @@
 		left: calc(100%/3 + 1px)
 	&:after
 		right: calc(33.33333% - 1px)
+
+.bright-nav
+	.galery
+		border-right: 1px solid $color-black
+		&:before,
+		&:after
+			border-right: 1px solid $color-black
+
 .galery__col
 	border-left: 1px solid $color-white
 	border-right: 1px solid $color-white
@@ -33,7 +41,6 @@
 .galery__item
 	border-top: 1px solid $color-white
 	padding: 40px 40px
-	border-top: 1px solid $color-white
 	width: 100%
 	page-break-inside: avoid
 	break-inside: avoid
@@ -43,6 +50,11 @@
 		max-height: 500px
 		margin-bottom: 10px
 		object-fit: cover
+
+.bright-nav
+	.galery__item
+		border-top: 1px solid $color-black
+		
 .moon-white
 	cursor: pointer
 	margin: auto
