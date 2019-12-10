@@ -11,6 +11,18 @@
 		padding-left: 40px
 
 @media screen and (max-width: 992px)
+	.bright-nav .navbar, 
+	.bright-nav .slide-menu,
+	.bright-nav .galery	
+		border-right-color: transparent
+	
+
+
+	// .bright-nav .galery:before, 
+	// .bright-nav .galery:after
+	// 	border-right-color: transparent
+
+
 	.galery
 		border-right: none
 		&:before,
@@ -164,8 +176,41 @@
 	.privacy-text
 		padding: 15px
 		border-right: none
-		
+
+	.blog_post_row_top
+		width: calc(100% + 30px)
+
+	.blog_post_row_img
+		width: calc(50% + 30px)
+		&:nth-child(2n-2)
+			border-right: 1px solid $color-black
+		.df
+			height: 100%
+	.flex-wrap
+		flex-direction: row
+
+	.blog_post_wrapper
+		border-right-color: transparent
+
+	.blog_post_wrapper:nth-child(1)
+		right: 0
+
+	.blog_post_top_title
+		align-items: flex-end
+		h1
+			max-width: 35%
+		a
+			min-width: 150px
+			margin-bottom: 10px
 @media screen and (max-width: 768px)
+
+	.bright-nav .secondary-header.bord-b-white:after
+		display: block
+	.blog_post_top_title
+		h1
+			max-width: 100%
+		a
+			display: none
 
 	.privacy-list
 		display: none
@@ -307,6 +352,19 @@
 
 	.bright-nav .galery
 		border-right-color: transparent
+
+	.share-wrapper
+		top: auto
+		bottom: 40px
+		right: 25px
+	
+	.blog_post_row
+		padding: 20px
+
+	.blog_post_row_img
+		width: calc(100% + 30px)
+		&:nth-child(2n-2)
+			border-right-color: transparent
 
 @media screen and (max-width: 576px)
 	.galery

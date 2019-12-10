@@ -220,9 +220,14 @@ $("[data-action=cut_blog_text]").text(function(i, text) {
  		} else return
  }
 
-
-
 /*=================== change fill-prop of icon 
+=======================*/
+/*=================== change  open share menu
+=======================*/
+	$('[data-click=share]').click(function(){
+		$(this).parents('.share-wrapper').toggleClass('active')
+	})
+/*=================== change open share menu 
 =======================*/
 /*=================== call the function
 =======================*/
