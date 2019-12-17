@@ -138,21 +138,7 @@ collection versions in header(homepage) functions
 		 },
 		});
 
-	/*=================== grid system for shap art page
-=======================*/
-
-	// $('.galery').imagesLoaded( function() {
-	//   $('#galery__container').masonry({
-	// 	  itemSelector: '.galery__item',
-	// 	  columnWidth: '.galery__item',
-	// 	  // horizontalOrder: true,
-	// 	  transitionDuration: 0,
-
-	// 	});
-	// });
-
-/*=================== grid system for shap art page
-=======================*/
+	
 /*=================== form validation
 =======================*/
 
@@ -177,6 +163,8 @@ collection versions in header(homepage) functions
 $('.phone-mask').keydown(function(){
 	$(this).mask('+1-000-000-00');
 })
+
+
 	
 
 /*=================== like tabs on privacy page
@@ -229,6 +217,106 @@ $("[data-action=cut_blog_text]").text(function(i, text) {
 	})
 /*=================== change open share menu 
 =======================*/
+
+/*=================== check-out page function  
+=======================*/
+	$('input[data-action=copy]').blur(function(){
+		if($(this).val()==''){
+			$(this).parent('.input-row').removeClass('valid')
+			$(this).parent('.input-row').addClass('not-valid')
+		}else {
+			$(this).parent('.input-row').removeClass('not-valid')
+			$(this).parent('.input-row').addClass('valid')
+		}
+	})
+	$('.submit-like-btn').on('click', function(){
+		var stepCounter = $('[data-stepCounter]')// these var are needed to change the step counter in the <form> tag
+		var stepVal = stepCounter.attr('data-stepCounter')//these var are needed to change the step counter in the <form> tag
+		var currentStepVal = $(this).attr('data-stepIndex')//these var are needed to change the step counter in the <form> tag
+		var parent = $(this).parents('.input-wrapper')
+		var input = parent.find('[data-action=copy]')// find input 
+		var newConteiner = parent.find('.input-info .input-info-content')// create a new container and add users data
+		newConteiner.empty()
+		input.each(function(){
+			if($(this).val()==''){
+				$(this).parent('.input-row').addClass('not-valid')
+			}else{
+				$(this).parent('.input-row').removeClass('not-valid')
+
+			}
+		})
+		if(parent.find('.input-row').hasClass('not-valid')){
+			return 
+		}
+		input.each(function(){ 
+
+			var el = '<div>'+$(this).val()+'</div>'// create a new container and add users data
+			newConteiner.append(el)
+		})
+		if(stepVal<currentStepVal){ // change the counter in the <form> tag
+			stepCounter.attr('data-stepCounter',currentStepVal)
+		}
+		parent.toggleClass('active')
+		setRoundProgressBar()
+	})
+	$('.input-wrapper').on('click', '.edit', function(){
+		$(this).parents('.input-wrapper').toggleClass('active')
+	})
+	$('.input-bright').click(function(){
+		$(this).removeClass('filled')
+	})
+	$('.input-bright').blur(function(){
+		if(!$(this).val()==''){
+			$(this).addClass('filled')
+		}
+	})
+
+	function showAccord (el){
+		$(el).click(function(){
+			$('[data-stepCounter]').attr('data-stepCounter',$(this).attr('data-stepValue'))//set the value of the 
+			$(el).parents('.input-row').removeClass('active')//form counter for the change progress bar at the top of the page
+				$('input[data-action=acord]').not(':checked').parents('.input-container').find('.not-valid').removeClass('not-valid')// remove errors calss
+				if(el=='input[data-action=acord2]'){
+
+						if(!$(this).is(':checked')){
+							$(this).parents('.input-row').addClass('active')
+						}
+						if($(this).is(':checked')){
+							$(this).parents('.input-row').find('.not-valid').removeClass('not-valid')
+						}
+				}else	if($(this).is(':checked')){
+					$(this).parents('.input-row').addClass('active')
+				}
+
+			setRoundProgressBar ()
+			})
+	}
+
+	
+
+	function setRoundProgressBar (){//set round progress bar in top of page
+		var reference = $('[data-stepCounter]')
+			if(reference){
+				var referenceVal = reference.attr('data-stepCounter')
+				var roundCounter = $('.round-counter svg')
+				roundCounter.html('<use xlink:href="#round'+referenceVal+'"></use>')
+
+			}
+	}
+	
+	// $('[data-check=check-input]').on('keyup', '[data-action=copy]', function(){
+	// 	var parent = $(this).parent('[data-attr=payInf]').find()
+	// 	if(!$(this).parent('[data-attr=payInf]').find('.input-row').hasClass('not-valid') && $('[data-attr=payInf] [data-action=copy]').val()!==''){
+	// 		$('.order-btn').removeAttr('disabled')
+	// 		$('.order-btn').addClass('active')
+	// 	}
+	// })
+
+	
+/*=================== check-out page function 
+=======================*/
+
+
 /*=================== call the function
 =======================*/
 	slideMenu('.hamburger', '.slide-menu', '.overlay');
@@ -244,6 +332,8 @@ $("[data-action=cut_blog_text]").text(function(i, text) {
 	fadeHeaderPrev('.arrow-left', '[data-slide=collec-title]');
 	fadeHeaderPrev('.arrow-left', '[data-slide=collec-ver]');
 
+	showAccord('input[data-action=acord]');
+	showAccord('input[data-action=acord2]');
 	changeFill()
 /*=================== swipe function 
 =======================*/
