@@ -271,6 +271,35 @@ $("[data-action=cut_blog_text]").text(function(i, text) {
 		}
 	})
 
+	// below function should check all input data at the last step and if input.val! == '' show order
+	$('.input-container').on('keyup','input[data-action=copy]', function(){
+		var parent = $(this).parents('.acordion-content')
+		var input = $(this).parents('.acordion-content').find('input[data-action=copy]')
+		var error = 0
+		input.each(function(){
+			if($(this).val() == ''){
+				error = error+1
+			}
+		})
+		function checkParent(){
+			if(!input.parent('.input-row').hasClass('not-valid')){
+				return true
+				console.log('checkParent')
+
+			}else{ 
+				return false}
+			}
+			if(checkParent() && error == 0){
+				$('.order-btn').removeAttr('disable')
+				$('.order-btn').addClass('active')
+			} else {
+				$('.order-btn').attr('disable', true)
+				$('.order-btn').removeClass('active')
+			}
+	})
+
+
+
 	function showAccord (el){
 		$(el).click(function(){
 			$('[data-stepCounter]').attr('data-stepCounter',$(this).attr('data-stepValue'))//set the value of the 
@@ -282,7 +311,7 @@ $("[data-action=cut_blog_text]").text(function(i, text) {
 							$(this).parents('.input-row').addClass('active')
 						}
 						if($(this).is(':checked')){
-							$(this).parents('.input-row').find('.not-valid').removeClass('not-valid')
+							$(this).parents('.input-row').find('.not-valid').removeClass('not-valid')// remove error massages
 						}
 				}else	if($(this).is(':checked')){
 					$(this).parents('.input-row').addClass('active')
@@ -303,19 +332,30 @@ $("[data-action=cut_blog_text]").text(function(i, text) {
 
 			}
 	}
-	
-	// $('[data-check=check-input]').on('keyup', '[data-action=copy]', function(){
-	// 	var parent = $(this).parent('[data-attr=payInf]').find()
-	// 	if(!$(this).parent('[data-attr=payInf]').find('.input-row').hasClass('not-valid') && $('[data-attr=payInf] [data-action=copy]').val()!==''){
-	// 		$('.order-btn').removeAttr('disabled')
-	// 		$('.order-btn').addClass('active')
-	// 	}
-	// })
-
-	
+	function inputOnFocus(el){
+			function removeClass(el){
+				el.parent('.input-row').removeClass('not-valid')
+				el.parent('.input-row').removeClass('valid')
+			}
+			$('[data-action=copy]').focus(function(){
+				removeClass($(this))
+			})
+			$('.input-wrapper').on('click',el, function(){
+			 	removeClass($(this))
+			$(this).parent('.input-row').find('[data-action=copy]').focus()
+		})
+	}
 /*=================== check-out page function 
 =======================*/
-
+/*=================== product page function 
+=======================*/
+	$('.fullscreen').on('click', function(event){
+		event.preventDefault()
+		 var img = $(this).parents('.prod-preview').find('img')
+		 
+	})
+/*=================== product page function 
+=======================*/
 
 /*=================== call the function
 =======================*/
@@ -334,7 +374,11 @@ $("[data-action=cut_blog_text]").text(function(i, text) {
 
 	showAccord('input[data-action=acord]');
 	showAccord('input[data-action=acord2]');
-	changeFill()
+	changeFill();
+
+	inputOnFocus('.error');
+	inputOnFocus('.not-error');
+
 /*=================== swipe function 
 =======================*/
 // function to fix some responsive problem
