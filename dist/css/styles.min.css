@@ -6802,6 +6802,9 @@ a {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
@@ -6817,6 +6820,11 @@ a {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.video-prev:hover svg {
+  stroke: #CF4C4C;
+  stroke-width: 0.8px;
 }
 
 .video-prev .arrow-left {
@@ -6844,6 +6852,18 @@ a {
           align-items: center;
 }
 
+.video-next:hover svg {
+  stroke: #CF4C4C;
+  stroke-width: 0.8px;
+}
+
+.photo .video-next {
+  -webkit-box-ordinal-group: 0;
+  -webkit-order: -1;
+      -ms-flex-order: -1;
+          order: -1;
+}
+
 .video-next .arrow-right {
   margin-bottom: 5px;
 }
@@ -6858,6 +6878,67 @@ a {
 
 .video-next p {
   margin-right: 10px;
+}
+
+.photo__slider {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -webkit-flex-direction: row-reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.photo__item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: calc(100%/3 - 10px);
+  position: relative;
+  opacity: 0.7;
+}
+
+.photo__item.active {
+  padding-left: 20px;
+  opacity: 1;
+}
+
+.photo__item.active .photo__name {
+  opacity: 1;
+  visibility: visible;
+}
+
+.photo__item img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.photo__name {
+  -webkit-transform: rotate(-90deg) translateX(-100%);
+      -ms-transform: rotate(-90deg) translateX(-100%);
+          transform: rotate(-90deg) translateX(-100%);
+  -webkit-transform-origin: 0% 20%;
+      -ms-transform-origin: 0% 20%;
+          transform-origin: 0% 20%;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  visibility: hidden;
 }
 
 /*!=================================
@@ -8469,6 +8550,12 @@ a {
   }
   .round-counter {
     display: none;
+  }
+  .photo .video-next {
+    -webkit-box-ordinal-group: 2;
+    -webkit-order: 1;
+        -ms-flex-order: 1;
+            order: 1;
   }
 }
 

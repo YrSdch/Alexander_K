@@ -5,14 +5,20 @@
 
 .slide-control
 	display: flex
+	flex-wrap: wrap
 	justify-content: space-between
 	margin-top: auto
 	margin-bottom: 0
+	
 
 .video-prev
 	cursor: pointer
 	font-size: 16px
 	align-items: center
+	&:hover
+		svg
+			stroke: #CF4C4C
+			stroke-width: 0.8px
 	.arrow-left
 		margin-top: 5px
 	.icon
@@ -26,6 +32,12 @@
 	cursor: pointer
 	font-size: 16px
 	align-items: center
+	&:hover
+		svg
+			stroke: #CF4C4C
+			stroke-width: 0.8px
+	.photo & 
+		order: -1
 	.arrow-right
 		margin-bottom: 5px
 	.icon
@@ -34,3 +46,35 @@
 		height: 16px
 	p
 		margin-right: 10px
+.photo__slider
+	display: flex
+	flex-direction: row-reverse
+	justify-content: space-between
+	overflow-x: hidden
+	position: relative
+	
+.photo__item
+	display: flex
+	width: calc(100%/3 - 10px)
+	position: relative
+	opacity: 0.7
+	&.active
+		padding-left: 20px
+		opacity: 1
+		.photo__name
+			opacity: 1
+			visibility: visible
+
+	img
+		width: 100%
+		object-fit: cover
+
+.photo__name
+	transform: rotate(-90deg) translateX(-100%)
+	transform-origin: 0% 20%
+	transition: all 0.3s
+	position: absolute
+	left: 0
+	top: 0
+	opacity: 0
+	visibility: hidden

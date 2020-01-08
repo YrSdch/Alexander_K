@@ -385,6 +385,47 @@ $("[data-action=cut_blog_text]").text(function(i, text) {
 	})
 /*=================== about page function (swipe)
 =======================*/
+/*=================== photo page function (swipe)
+=======================*/
+// function photoSlide(target){
+// 	var slideItem = $('.photo__item'),
+// 			itemIndex = slideItem.index(),
+// 			curentItem = $('.photo__item.active'),
+// 			curentIndex = curentItem.index(),
+// 			elemWidth = curentItem.width(),
+// 			curentPos = curentItem.offset().left,
+// 			nextEl = slideItem.eq(curentIndex+1)
+// 			nextElThecond = slideItem.eq(curentIndex+2)
+// 			console.log(curentPos)
+// 			console.log(curentPos)
+// 	if (target.hasClass('video-next')) {
+// 		curentItem.animate({left: `${elemWidth}`},1000)
+// 		curentItem.removeClass('active')
+// 		curentItem.addClass('next')
+// 		// if (curentIndex+2>slideItem.length) {
+// 		// 	nextElThecond = slideItem.eq(0)
+// 		// }
+// 		nextEl.animate({left: `${elemWidth }`},1000,function(){
+// 			nextEl.offset({left:`${curentPos - 45}`})
+// 			nextEl.addClass('active')
+// 		})
+// 		nextElThecond.animate({left: `${elemWidth}`}, 1000)
+
+		
+		
+		
+// 	}
+	// if (target.hasClass('video-prev')) {
+		
+	// }
+}
+$('.video-next').click(function(){
+	photoSlide($('.video-next'))
+})
+
+
+/*=================== photo page function (swipe)
+=======================*/
 /*=================== call the function
 =======================*/
 	slideMenu('.hamburger', '.slide-menu', '.overlay');
