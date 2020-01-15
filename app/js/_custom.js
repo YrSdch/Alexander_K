@@ -418,7 +418,7 @@ $("[data-action=cut_blog_text]").text(function(i, text) {
 	// if (target.hasClass('video-prev')) {
 		
 	// }
-}
+// }
 $('.video-next').click(function(){
 	photoSlide($('.video-next'))
 })
