@@ -28,6 +28,8 @@
 		height: 100%
 		max-height: 710px
 		object-fit: cover
+	&.room-hidden:nth-child(2)
+		display: none
 
 .preview__bottom
 	display: flex
@@ -86,7 +88,7 @@
 		display: flex
 
 .modal__bg
-	background: rgba(0, 0, 0, 0.7)
+	background: rgba(0, 0, 0, 0.8)
 	position: absolute
 	top: 0
 	bottom: 0
@@ -97,8 +99,29 @@
 	position: relative
 	display: flex
 	margin: auto
+	padding: 20px
 	z-index: 120
 	img
 		max-width: 100%
+		height: auto
+		width: auto
+		max-height: 1000px
+		object-fit: contain
+.close-modal
+	display: flex
+	align-items: center
+	justify-content: center
+	position: absolute
+	right: 40px
+	top: 40px
+	width: 40px
+	height: 40px
+	background: rgba(0, 0, 0, 0.7)
+	border-radius: 5px
+	font-size: 40px
+	font-family: cursive
+	color: white
+	cursor: pointer
+	z-index: 121
 
 

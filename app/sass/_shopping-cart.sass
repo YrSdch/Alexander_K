@@ -17,6 +17,16 @@
 	&.active
 		transform: translateX(0)
 		transition: 0.3s
+[data-hover="checkout__arrow"]
+	a
+		&:after
+			left: auto!important
+			right: 20px!important
+			transform: translateX(-1px)!important
+			width: 10px!important
+		&:hover
+			&:after
+				width: calc(100% - 120px)!important
 
 .bright-nav
 	.shopping-cart-wrapper
