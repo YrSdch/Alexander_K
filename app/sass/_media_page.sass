@@ -52,13 +52,14 @@
 	justify-content: space-between
 	overflow-x: hidden
 	position: relative
+	overflow-x: hidden
 	
 .photo__item
 	display: flex
-	width: calc(100%/3 - 10px)
 	position: relative
 	opacity: 0.7
 	&.active
+		width: calc(100%/3 - 10px)
 		padding-left: 20px
 		opacity: 1
 		order: 0
@@ -66,9 +67,11 @@
 			opacity: 1
 			visibility: visible
 	&.next
+		width: calc(100%/3 - 10px)
 		opacity: 0.7
 		order: 1
 	&.prev
+		width: calc(100%/3 - 10px)
 		opacity: 0.7
 		order: 2
 
